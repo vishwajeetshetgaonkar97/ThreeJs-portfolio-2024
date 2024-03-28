@@ -10,7 +10,7 @@ const Loader = () => {
   const screenRef = useRef();
 
   return (
-    <Html className={styles.loaderContainer} center position={[0, 0, 0]} style={{ width: size.width, height: size.height }} prepend center zIndexRange={[100, 0]} ref={screenRef}>
+    <Html className={styles.loaderContainer} center position={[0, 0, 0]} style={{ width: size.width, height: size.height }} prepend zIndexRange={[100, 0]} ref={screenRef}>
 
 <div className={styles["traffic-loader"]}></div>
     </Html>

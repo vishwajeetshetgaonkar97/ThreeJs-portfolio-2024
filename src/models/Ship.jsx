@@ -6,7 +6,6 @@ export function Ship({
   isRotating,
   setIsRotating,
   setCurrentStage,
-  currentFocusPoint,
   ...props
 }) {
 
