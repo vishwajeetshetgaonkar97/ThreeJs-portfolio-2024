@@ -1,0 +1,99 @@
+
+  .currentStageCard{
+    padding: 1.5vh 2vw;
+    /* background: rgba(0, 123, 255, 0.032);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 11px );
+    border-radius: 20px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+    background: radial-gradient( rgb(255, 255, 255), rgba(255, 255, 255, 0));
+    /* font-family: "poppins"; */
+    font-family: "Lato", sans-serif;
+    font-size: 2.4vh;
+    text-align: center;
+    /* backdrop-filter: blur( 1px ); */
+  }
+  
+  .currentStageCard span{
+    font-weight: 800;
+   
+    font-family: "Sacramento", cursive;
+    font-size: 4.4vh;
+    background: -webkit-linear-gradient(rgb(0, 102, 255), rgb(102, 2, 138));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    
+  }
+
+  .currentStageTitle{
+    text-align: center;
+    /* font-family: "Sacramento", cursive; */
+  }
+
+  .currentStageCardContent{
+    padding: 0.5vh;
+  }
+
+  .buttonContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+  }
+  .cssbuttons-io-button {
+    background: rgba(0, 72, 255, 0.598);
+    color: white;
+    font-family: inherit;
+    padding: 0.2vh;
+    padding-left: 2vh;
+    font-size: 2vh;
+    font-weight: 500;
+    border-radius: 1.2vh;
+    border: none;
+    /* letter-spacing: 0.05em; */
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em rgba(3, 104, 38, 0.329);
+    overflow: hidden;
+    position: relative;
+    height: 5.2vh;
+    padding-right: 6vh;
+    cursor: pointer;
+  text-transform: capitalize;
+  }
+  
+  .cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    right: 0.25em;
+    transition: all 0.3s;
+  }
+  
+  .cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+  }
+  
+  .cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: rgb(0, 102, 255);
+  }
+  
+  .cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+  }
+  
+  .cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+  }
+  
