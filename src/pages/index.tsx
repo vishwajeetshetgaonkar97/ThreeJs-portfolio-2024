@@ -26,7 +26,6 @@ export default function Home() {
 
   const [islandScale, islandPosition] = adjustIslandForScreenSize();
 
-
   return (
     <>
       <Head>
