@@ -7,8 +7,12 @@ import { Suspense, useEffect, useRef, useState } from "react";
 import Loader from "../components/Loader/Loader";
 import Navigation from "../components/Navigation/Navigation";
 import Footer from "@/components/Footer/Footer";
+import GlobalLoader from '../components/GlobalLoader/GlobalLoader'
+
 
 export default function Projects() {
+  const [isLoading, setIsLoading] = useState(true);
+
   const adjustIslandForScreenSize = () => {
     let screenScale, screenPosition;
 
@@ -28,9 +32,9 @@ export default function Projects() {
       </Head>
       <main>
         <Navigation />
-
+        {  isLoading &&  <GlobalLoader/>}
         <Canvas className={styles.canvas}>
-          <Suspense fallback={<Loader />}>
+          <Suspense fallback={<Loader setIsLoading={setIsLoading} />}>
             <directionalLight position={[1, 1, 1]} intensity={1} />
             <ambientLight intensity={0.5} />
             <pointLight position={[10, 5, 10]} intensity={1} />
