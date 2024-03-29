@@ -1,0 +1,90 @@
+
+
+
+.wipMobileModalContainer{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  z-index: 5 !important;
+  /* margin: 25% 0; */
+  top: 0;
+}
+
+.cssbuttons-io-button {
+  background: rgba(0, 72, 255, 0.598);
+  color: white;
+  font-family: inherit;
+  padding: 0.2vh;
+  padding-left: 2vh;
+  font-size: 2vh;
+  font-weight: 500;
+  border-radius: 1.2vh;
+  border: none;
+  /* letter-spacing: 0.05em; */
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em rgba(3, 104, 38, 0.329);
+  overflow: hidden;
+  position: relative;
+  height: 5.2vh;
+  padding-right: 6vh;
+  cursor: pointer;
+text-transform: capitalize;
+font-family: "Lato", sans-serif !important;
+}
+.infoContainerHeading{
+  font-size: 5.5vh;
+}
+.infoContainer{
+  margin-top: -5vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.info{
+  font-family: "Lato", sans-serif;
+  font-size: 2vh;
+  padding-bottom: 2vh;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  right: 0.25em;
+  transition: all 0.3s;  
+ 
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: rgb(0, 102, 255);
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+
+
