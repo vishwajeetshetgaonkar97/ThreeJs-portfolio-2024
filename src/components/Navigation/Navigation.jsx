@@ -19,10 +19,10 @@ className={styles.logo}
       />
 
       <div className={styles.linksContainer}>
-        <div> <Link href="/">Home</Link></div>
-        <div><Link href="/projects">Projects</Link></div>
-        <div><Link href="/about">About</Link></div>
-        <div><Link href="/contact">Contact</Link></div>
+        <div> <Link className={styles.link} href="/">Home</Link></div>
+        <div><Link className={styles.link} href="/projects">Projects</Link></div>
+        <div><Link className={styles.link} href="/about">About</Link></div>
+        <div><Link className={styles.link} href="/contact">Contact</Link></div>
 
       </div>
       </div>

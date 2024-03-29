@@ -29,3 +29,7 @@
     padding-left: 70vw;
     justify-content: space-between;
 }
+
+.link:hover{
+    color:#7d4eff ;
+}
