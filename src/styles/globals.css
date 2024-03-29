@@ -39,9 +39,6 @@ a {
   color: black;
 }
 
-a:hover {
-  scale:  1.3;
-  }
 
 .main,canvas{
   height: 100vh;
