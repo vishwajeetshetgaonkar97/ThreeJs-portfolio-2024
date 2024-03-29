@@ -49,8 +49,8 @@ export default function Projects() {
 
         <div className={styles.main_container}>
           <div className={styles.headingContainer}>
-          <div className={styles.heading}>Hello! 🏴‍☠️</div>
-          <div className={styles.subHeading}>Checkout Few of my side hustle Projects!</div>
+          <div className={styles.heading}>Hello! 🏴‍☠️<br/></div>
+          <div className={styles.subHeading}>Checkout Few of my Side Hustle Projects!💰<br/></div>
           </div>
           
 
@@ -78,12 +78,32 @@ export default function Projects() {
             </div>
 
             <div className={styles.cardWrapper} onClick={() => {
-              window.open( "https://github.com/vishwajeetshetgaonkar97/CSS-F1/tree/master");
+              window.open( "https://github.com/vishwajeetshetgaonkar97/CSS-F1r");
             }}>
               <img src="/f1.jpg" alt="dashboard" />
               <div className={styles.cardWrapperHeading}>CSS F1 Car</div>
               <div className={styles.cardWrapperDescription}>
               A pure CSS representation of a Formula 1 car to explore different forms and properties, which helps in reducing unnecessary use of plugins and packages for better optimization.
+              </div>
+            </div>
+
+            <div className={styles.cardWrapper} onClick={() => {
+              window.open( "https://github.com/vishwajeetshetgaonkar97/CSS-Santa");
+            }}>
+              <img src="/santa.jpg" alt="dashboard" />
+              <div className={styles.cardWrapperHeading}>CSS Santa Claus</div>
+              <div className={styles.cardWrapperDescription}>
+              A pure CSS representation of a snowy landscape with Santa Claus to explore and learn different properties of css, which helps in reducing unnecessary use of plugins and packages for better optimization.
+              </div>
+            </div>
+
+            <div className={styles.cardWrapper} onClick={() => {
+              window.open( "https://dribbble.com/shots/23478262-Restaurant-Logo");
+            }}>
+              <img src="/restaurantLogo.png" alt="dashboard" />
+              <div className={styles.cardWrapperHeading}>Flavor Heaven Logo</div>
+              <div className={styles.cardWrapperDescription}>
+              Create a logo for a retro-style restaurant imbued with a vintage feel, vibrant and nostalgic vibe, aiming to evoke feelings of nostalgia, freedom, and the recollection of good old times.
               </div>
             </div>
 
