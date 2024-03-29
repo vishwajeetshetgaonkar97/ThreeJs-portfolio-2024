@@ -69,10 +69,7 @@ export default function About() {
                 <img src="/ReactJS.jpg" alt="grid Image 5" />
 
                 <img src="/js.jpeg" alt="grid Image 3" />
-                <img
-                  src="/react native.png"
-                  alt="grid Image 6"
-                />
+                <img src="/react native.png" alt="grid Image 6" />
                 <img src="/mongo.png" alt="grid Image 6" />
               </div>
 
@@ -104,8 +101,46 @@ export default function About() {
               </div>
             </div>
           </div>
+
+          <div className={styles.experience}>
+          <div className={`${styles.heading} ${styles.experienceHeading}`}>
+          Career Adventure! ☠️
+          </div>
+            <div className={styles.experienceCard}>
+              <div className={styles.experienceCardHeading}>Freelancer (2023-presemt)</div>
+              <div  className={styles.experienceCardContent}>
+                <ul>
+                  <li>
+                    Completed 5+ projects in UI/UX Design & Front End
+                    Development.
+                  </li>
+                  <li>Proficient in React JS, JavaScript, Figma, and CSS.</li>
+                  <li>
+                    Collaborated with cross-functional teams to integrate user
+                    feedback and optimize usability.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className={styles.experienceCard}>
+              <div className={styles.experienceCardHeading}>Sportvot (2020-2022)</div>
+              <div  className={styles.experienceCardContent}>
+                <ul>
+                  <li>
+                  Led design and development of a React JS-based web applications.
+                  </li>
+                  <li>Designed UI/UX for complete product  redesign from scratch.</li>
+                  <li>
+                  Integrated over 80 APIs using React JS, Material UI, and Chart JS.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
         </div>
-        <Footer/>
+        <Footer />
       </main>
     </>
   );
