@@ -10,7 +10,7 @@ export function Ship({
 }) {
 
   const islandRef = useRef();
-  const { nodes, materials } = useGLTF("/images/models/ship.glb");
+  const { nodes, materials } = useGLTF("/ship.glb");
   const { gl, viewport } = useThree();
 
   const skyRef = useRef();
@@ -134,4 +134,4 @@ export function Ship({
   );
 }
 
-useGLTF.preload("/images/models/ship.glb");
+useGLTF.preload("/ship.glb");
