@@ -84,7 +84,7 @@ console.log("proj",isLoading)
             <div className={styles.cardWrapper} onClick={() => {
               window.open( "https://github.com/vishwajeetshetgaonkar97/CSS-F1r");
             }}>
-              <img src="/f1.JPG" alt="dashboard" />
+              <img src="/f1.png" alt="dashboard" />
               <div className={styles.cardWrapperHeading}>CSS F1 Car</div>
               <div className={styles.cardWrapperDescription}>
               A pure CSS representation of a Formula 1 car to explore different forms and properties, which helps in reducing unnecessary use of plugins and packages for better optimization.
@@ -94,7 +94,7 @@ console.log("proj",isLoading)
             <div className={styles.cardWrapper} onClick={() => {
               window.open( "https://github.com/vishwajeetshetgaonkar97/CSS-Santa");
             }}>
-              <img src="/santa.JPG" alt="dashboard" />
+              <img src="/santa.png" alt="dashboard" />
               <div className={styles.cardWrapperHeading}>CSS Santa Claus</div>
               <div className={styles.cardWrapperDescription}>
               A pure CSS representation of a snowy landscape with Santa Claus to explore and learn different properties of css, which helps in reducing unnecessary use of plugins and packages for better optimization.
