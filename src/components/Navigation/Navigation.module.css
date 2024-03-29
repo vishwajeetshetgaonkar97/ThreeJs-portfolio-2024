@@ -30,6 +30,12 @@
     justify-content: space-between;
 }
 
+.link{
+    font-family: 'Lato',sans-serif;
+    font-size: 2vh;
+}
+
 .link:hover{
     color:#7d4eff ;
+
 }
