@@ -20,7 +20,9 @@ const HomeInfo = ({ currentStage }) => {
           Crafting User-Centric Skills Across Industries
         </div>
         <div className={styles.buttonContainer}>
-          <button className={styles["cssbuttons-io-button"]}>
+          <button className={styles["cssbuttons-io-button"]} onClick={() => {
+              location.href = "/about";
+            }}>
             learn more
             <div className={styles.icon}>
               <svg
@@ -51,7 +53,9 @@ const HomeInfo = ({ currentStage }) => {
         </div>
 
         <div className={styles.buttonContainer}>
-          <button className={styles["cssbuttons-io-button"]}>
+          <button className={styles["cssbuttons-io-button"]} onClick={() => {
+              location.href = "/projects";
+            }}>
             explore now
             <div className={styles.icon}>
               <svg
@@ -83,7 +87,9 @@ const HomeInfo = ({ currentStage }) => {
         </div>
 
         <div className={styles.buttonContainer}>
-          <button className={styles["cssbuttons-io-button"]}>
+          <button className={styles["cssbuttons-io-button"]} onClick={() => {
+              location.href = "/contact";
+            }}>
             Lets Talk
             <div className={styles.icon}>
               <svg
