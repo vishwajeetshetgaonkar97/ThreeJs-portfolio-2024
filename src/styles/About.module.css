@@ -91,7 +91,8 @@ margin-bottom: 5vh;
   justify-content: flex-start;
   text-align: left;
   padding: 1.5vh 1vw;
-  background: linear-gradient(#ffffff33, rgba(255, 255, 255, 0.066));
+  background: radial-gradient(rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0.066));
+  backdrop-filter: blur( 2px );
 }
 
 .experienceCard ul{
