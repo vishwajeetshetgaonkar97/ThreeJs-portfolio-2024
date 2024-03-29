@@ -10,9 +10,11 @@ import Loader from "../components/Loader/Loader";
 import HomeInfo from "../components/HomeInfo/HomeInfo";
 import Navigation from "../components/Navigation/Navigation";
 import Footer from "../components/Footer/Footer";
+import GlobalLoader from '../components/GlobalLoader/GlobalLoader'
 
 export default function Home() {
   const [isRotating, setIsRotating] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [currentStage, setCurrentStage] = useState(1);
 
   const adjustIslandForScreenSize = () => {
@@ -24,6 +26,8 @@ export default function Home() {
 
   const [islandScale, islandPosition] = adjustIslandForScreenSize();
 
+console.log("loadinggggg",isLoading)
+
   return (
     <>
       <Head>
@@ -32,15 +36,17 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.png" />
       </Head>
+
       <main className={isRotating ? "cursor-grabbing" : "cursor-grab"}>
         <Navigation />
+    {  isLoading &&  <GlobalLoader/>}
 
-        <div className={styles.stageContainer}>
+      <div className={styles.stageContainer}>
           {currentStage && <HomeInfo currentStage={currentStage} />}
         </div>
 
         <Canvas>
-          <Suspense fallback={<Loader />}>
+          <Suspense fallback={<Loader setIsLoading={setIsLoading} />}>
             <directionalLight position={[1, 1, 1]} intensity={1} />
             <ambientLight intensity={0.5} />
             <pointLight position={[10, 5, 10]} intensity={1} />
@@ -80,6 +86,7 @@ export default function Home() {
             />
           </div>
         )}
+      
         <Footer/>
       </main>
     </>

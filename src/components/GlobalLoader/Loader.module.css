@@ -15,9 +15,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #0073ff72; */
+  background-color: #ffffff;
   position: absolute;
-  z-index: 1;
+  z-index: 5 !important;
 }
 
 .traffic-loader {

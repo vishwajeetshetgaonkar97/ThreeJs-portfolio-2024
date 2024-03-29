@@ -5,21 +5,13 @@ import Image from 'next/image'
 import styles from './Loader.module.css';
 
 
-const Loader = ({setIsLoading}) => {
-  const { size } = useThree();
-  const screenRef = useRef();
-
-  useEffect(() => {
-   
-    return () => {
-      console.log("unmount")
-     setIsLoading(false)
-    }; // Clean up on component unmount
-  }, []);
-
+const Loader = () => {
 
   return (
-   <></>
+    <div className={styles.loaderContainer}>
+
+<div className={styles["traffic-loader"]}></div>
+    </div>
   );
 };
 
