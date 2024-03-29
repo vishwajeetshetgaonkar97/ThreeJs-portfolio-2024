@@ -82,7 +82,7 @@ console.log("proj",isLoading)
             </div>
 
             <div className={styles.cardWrapper} onClick={() => {
-              window.open( "https://github.com/vishwajeetshetgaonkar97/CSS-F1r");
+              window.open( "https://github.com/vishwajeetshetgaonkar97/CSS-F1");
             }}>
               <img src="/f1.png" alt="dashboard" />
               <div className={styles.cardWrapperHeading}>CSS F1 Car</div>
