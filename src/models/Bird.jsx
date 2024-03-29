@@ -4,7 +4,7 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 
 export function Bird(props) {
   const birdRef = useRef();
-  const { scene,nodes, materials, animations } = useGLTF("/images/models/bird.glb");
+  const { scene,nodes, materials, animations } = useGLTF("/bird.glb");
   const { actions } = useAnimations(animations, birdRef);
 
   useEffect(() => {
@@ -80,4 +80,4 @@ export function Bird(props) {
   );
 }
 
-useGLTF.preload("/images/models/bird.glb");
+useGLTF.preload("/bird.glb");

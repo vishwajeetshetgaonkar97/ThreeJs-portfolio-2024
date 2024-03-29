@@ -3,7 +3,7 @@ import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
 export function Sky({isRotating,...props}) {
-  const { nodes, materials } = useGLTF("/images/models/sky.glb");
+  const { nodes, materials } = useGLTF("/sky.glb");
 
   const skyRef = useRef();
 
@@ -30,4 +30,4 @@ export function Sky({isRotating,...props}) {
   );
 }
 
-useGLTF.preload("/images/models/sky.glb");
+useGLTF.preload("/sky.glb");
