@@ -73,7 +73,7 @@ export default function Contact() {
               <img
                 className={styles.imgIcons}
                 alt=""
-                src="/images/socialMediaIcons/github.png"
+                src="/socialMediaIcons/github.png"
               />
             </a>
             <a
@@ -84,7 +84,7 @@ export default function Contact() {
               <img
                 className={styles.imgIcons}
                 alt=""
-                src="/images/socialMediaIcons/linkedin.png"
+                src="/socialMediaIcons/linkedin.png"
               />
             </a>
             <a
@@ -95,7 +95,7 @@ export default function Contact() {
               <img
                 className={styles.imgIcons}
                 alt=""
-                src="/images/socialMediaIcons/twitter.png"
+                src="/socialMediaIcons/twitter.png"
               />
             </a>
 
@@ -107,7 +107,7 @@ export default function Contact() {
               <img
                 className={styles.imgIcons}
                 alt=""
-                src="/images/socialMediaIcons/dribble.png"
+                src="/socialMediaIcons/dribble.png"
               />
             </a>
           </div>

@@ -73,7 +73,7 @@ export default function Home() {
           <div className={styles.guidance_Icon_container}>
             <Image
               className={styles.GuideIcon}
-              src={`/images/pressButton.png`}
+              src={`/pressButton.png`}
               width={27}
               height={27}
               alt="guidence image"

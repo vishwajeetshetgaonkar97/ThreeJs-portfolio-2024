@@ -66,46 +66,46 @@ export default function About() {
           <div>
             <div className={styles.photoGrid}>
               <div className={styles.photoGridColumn}>
-                <img src="./images/skills/ReactJS.jpg" alt="grid Image 5" />
+                <img src="/ReactJS.jpg" alt="grid Image 5" />
 
-                <img src="./images/skills/js.jpeg" alt="grid Image 3" />
+                <img src="/js.jpeg" alt="grid Image 3" />
                 <img
-                  src="./images/skills/react native.png"
+                  src="/react native.png"
                   alt="grid Image 6"
                 />
-                <img src="./images/skills/mongo.png" alt="grid Image 6" />
+                <img src="/mongo.png" alt="grid Image 6" />
               </div>
 
               <div className={styles.photoGridColumn}>
-                <img src="./images/skills/next.png" alt="grid Image 10" />
+                <img src="/next.png" alt="grid Image 10" />
 
-                {/* <img src="./images/skills/html.png" alt="grid Image 1"/> */}
+                {/* <img src="/html.png" alt="grid Image 1"/> */}
 
-                <img src="./images/skills/bootstrap.png" alt="grid Image 7" />
+                <img src="/bootstrap.png" alt="grid Image 7" />
 
-                <img src="./images/skills/mui.png" alt="grid Image 8" />
+                <img src="/mui.png" alt="grid Image 8" />
 
-                <img src="./images/skills/photoshop.jpg" alt="grid Image 12" />
+                <img src="/photoshop.jpg" alt="grid Image 12" />
               </div>
 
               <div className={styles.photoGridColumn}>
-                <img src="./images/skills/figma.jpg" alt="grid Image 10" />
-                <img src="./images/skills/xd.png" alt="grid Image 9" />
+                <img src="/figma.jpg" alt="grid Image 10" />
+                <img src="/xd.png" alt="grid Image 9" />
 
-                <img src="./images/skills/ills.png" alt="grid Image 11" />
-                <img src="./images/skills/express.jpg" alt="grid Image 8" />
+                <img src="/ills.png" alt="grid Image 11" />
+                <img src="/express.jpg" alt="grid Image 8" />
               </div>
 
               <div className={styles.photoGridColumn}>
-                <img src="./images/skills/css.jpg" alt="grid Image 2" />
-                <img src="./images/skills/node.png" alt="grid Image 12" />
+                <img src="/css.jpg" alt="grid Image 2" />
+                <img src="/node.png" alt="grid Image 12" />
 
-                <img src="./images/skills/html.png" alt="grid Image 8" />
+                <img src="/html.png" alt="grid Image 8" />
               </div>
             </div>
           </div>
         </div>
-        {/* <Footer/> */}
+        <Footer/>
       </main>
     </>
   );
