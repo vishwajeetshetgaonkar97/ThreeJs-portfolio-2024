@@ -47,7 +47,7 @@ line-height: 4.2vh;
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
-  padding: 3vh 0px;
+  padding: 3vh 0px 10vh 0;
   opacity: 0.95;
 }
 
@@ -67,4 +67,3 @@ line-height: 4.2vh;
 .photoGridColumn img:hover {
   transform: scale(1.02);
 }
-

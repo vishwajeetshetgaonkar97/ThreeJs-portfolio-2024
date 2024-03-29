@@ -6,6 +6,7 @@ import { Bird } from "../models/Bird";
 import { Suspense, useEffect, useRef, useState } from "react";
 import Loader from "../components/Loader/Loader";
 import Navigation from "../components/Navigation/Navigation";
+import Footer from "@/components/Footer/Footer";
 
 export default function About() {
   const adjustIslandForScreenSize = () => {
@@ -32,7 +33,7 @@ export default function About() {
 
         <Canvas className={styles.canvas}>
           <Suspense fallback={<Loader />}>
-          <directionalLight position={[1, 1, 1]} intensity={1} />
+            <directionalLight position={[1, 1, 1]} intensity={1} />
             <ambientLight intensity={0.5} />
             <pointLight position={[10, 5, 10]} intensity={1} />
             <spotLight
@@ -67,7 +68,6 @@ export default function About() {
               <div className={styles.photoGridColumn}>
                 <img src="./images/skills/ReactJS.jpg" alt="grid Image 5" />
 
-
                 <img src="./images/skills/js.jpeg" alt="grid Image 3" />
                 <img
                   src="./images/skills/react native.png"
@@ -84,9 +84,8 @@ export default function About() {
                 <img src="./images/skills/bootstrap.png" alt="grid Image 7" />
 
                 <img src="./images/skills/mui.png" alt="grid Image 8" />
-                
+
                 <img src="./images/skills/photoshop.jpg" alt="grid Image 12" />
-                
               </div>
 
               <div className={styles.photoGridColumn}>
@@ -95,21 +94,18 @@ export default function About() {
 
                 <img src="./images/skills/ills.png" alt="grid Image 11" />
                 <img src="./images/skills/express.jpg" alt="grid Image 8" />
-
               </div>
 
               <div className={styles.photoGridColumn}>
-                
-              <img src="./images/skills/css.jpg" alt="grid Image 2" />
+                <img src="./images/skills/css.jpg" alt="grid Image 2" />
                 <img src="./images/skills/node.png" alt="grid Image 12" />
-                
+
                 <img src="./images/skills/html.png" alt="grid Image 8" />
               </div>
-
-              
             </div>
           </div>
         </div>
+        {/* <Footer/> */}
       </main>
     </>
   );
