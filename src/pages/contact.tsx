@@ -33,7 +33,7 @@ export default function Contact() {
       <main>
         <Navigation />
 
-        {  isLoading &&  <GlobalLoader/>}
+        {/* {  isLoading &&  <GlobalLoader/>} */}
         <Canvas className={styles.canvas}>
           <Suspense fallback={<Loader setIsLoading={setIsLoading} />}>
             <directionalLight position={[1, 1, 1]} intensity={1} />

@@ -21,7 +21,7 @@ export default function Projects() {
 
     return [screenScale, screenPosition];
   };
-
+console.log("proj",isLoading)
   return (
     <>
       <Head>
@@ -32,7 +32,7 @@ export default function Projects() {
       </Head>
       <main>
         <Navigation />
-        {  isLoading &&  <GlobalLoader/>}
+        {/* {  isLoading &&  <GlobalLoader/>} */}
         <Canvas className={styles.canvas}>
           <Suspense fallback={<Loader setIsLoading={setIsLoading} />}>
             <directionalLight position={[1, 1, 1]} intensity={1} />
