@@ -1,41 +1,93 @@
-
-.navBar{
-    position: fixed;
-    width: 100vw;
-    height: 7vh;
-    z-index: 1;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   background: linear-gradient(#ffffff, rgba(255, 255, 255, 0.1));
-   backdrop-filter: blur( 5px );
-
+.navBar {
+  position: fixed;
+  width: 100vw;
+  height: 7vh;
+  z-index: 6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#ffffff, rgba(255, 255, 255, 0.1));
+  backdrop-filter: blur(5px);
+  transition: all 0.5s ease-in-out;
 }
 
-.logo{
-    height: 4vh;
-    width: 9vh;
-    padding: 2vh;
-    border: 2vh;
-    filter: invert(100%);
-
+.logo {
+  height: 4vh;
+  width: 9vh;
+  padding: 2vh;
+  border: 2vh;
+  filter: invert(100%);
 }
 
-.linksContainer{
+.linksBurgerContainer {
+  display: none;
+}
+
+.linksContainer {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-family: "Lato", sans-serif;
+  width: 18vw;
+  padding-left: 70vw;
+  justify-content: space-between;
+}
+
+.link {
+  font-family: "Lato", sans-serif;
+  font-size: 2vh;
+}
+
+.link:hover {
+  color: #7d4eff;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .navBarActive {
+        background: linear-gradient(#ffffff, rgb(255, 255, 255));
+      }
+
+  .linksBurgerContainer {
     display: flex;
-    font-family: "Poppins", sans-serif;
-    font-family: "Lato", sans-serif;
-    width: 18vw;
-    padding-left: 70vw;
-    justify-content: space-between;
-}
+    width: 80vw;
+    justify-content: flex-end;
+    padding-right: 5vw;
+  }
 
-.link{
-    font-family: 'Lato',sans-serif;
-    font-size: 2vh;
-}
+  .burgerIcon {
+    height: 4vh;
+    width: 4vh;
+  }
 
-.link:hover{
-    color:#7d4eff ;
+  .closeIcon{
+    height: 3vh;
+    width: 3vh;
+  }
 
+  .linksContainer {
+    position: absolute;
+    width: 100vw;
+    height: 93vh;
+    padding-left: 0vw;
+    justify-content: center;
+    align-items: center;
+    top: -100vh;
+    flex-direction: column;
+    background: linear-gradient(#ffffff, rgba(255, 255, 255, 0.751));
+    backdrop-filter: blur(5px);
+    transition: all 0.5s ease-in-out;
+  }
+  .linksContainer div {
+    padding: 2vh 0;
+  }
+
+  .link {
+    font-size: 3vh;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.904);
+  }
+
+  .linksContainerActive{
+top: 7vh;
+  }
 }
