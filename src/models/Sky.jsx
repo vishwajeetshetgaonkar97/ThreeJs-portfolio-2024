@@ -9,7 +9,7 @@ export function Sky({isRotating,...props}) {
 
   useFrame((_, delta) => {
     if (isRotating) {
-      skyRef.current.rotation.z += 0.25 * delta; // Adjust the rotation speed as needed
+      skyRef.current.rotation.z += 0.1 * delta; // Adjust the rotation speed as needed
     }
   });
 

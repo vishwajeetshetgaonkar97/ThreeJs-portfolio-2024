@@ -124,7 +124,7 @@ export default function About() {
                     Completed 5+ projects in UI/UX Design & Front End
                     Development.
                   </li>
-                  <li>Proficient in React JS, JavaScript, Figma, and CSS.</li>
+                  <li>Expertise in React JS, JavaScript, Figma, and CSS.</li>
                   <li>
                     Collaborated with cross-functional teams to integrate user
                     feedback and optimize usability.
@@ -138,11 +138,11 @@ export default function About() {
               <div  className={styles.experienceCardContent}>
                 <ul>
                   <li>
-                  Led design and development of a React JS-based web applications.
+                  Led design and development of Saas web applications for a sport-tech Startup.
                   </li>
-                  <li>Designed UI/UX for complete product  redesign from scratch.</li>
+                  <li>Complete product redesign from scratch  using Agile methodology.</li>
                   <li>
-                  Integrated over 80 APIs using React JS, Material UI, and Chart JS.
+                  Integrated over 80+ APIs with code base of over 1M+ line. 
                   </li>
                 </ul>
               </div>
