@@ -20,6 +20,10 @@ className={styles.logo}
         width={100}
         height={100}
         alt="logo image"
+        
+      onClick={() => {
+        location.href = "/";
+      }}
       />
 
       <div className={styles.linksBurgerContainer} onClick={()=>setIsOpen(!isOpen)}>
