@@ -31,3 +31,9 @@
     0%   { left: -20px; top: 0px;}
     100% { left: 40px; top: 0px;}
   }
+
+  @media only  screen and (max-width: 800px) {
+    .stageContainer{
+      top: 21vh;
+    }
+  }

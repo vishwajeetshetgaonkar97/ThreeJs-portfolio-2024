@@ -22,7 +22,7 @@ export default function Home() {
   const adjustIslandForScreenSize = () => {
     let screenScale, screenPosition;
     if (isMobile) {
-      screenScale = [0.8, 0.8, 0.8];
+      screenScale = [0.9, 0.9, 0.9];
       screenPosition = [0, 0, -1];
     }else{
       screenScale = [1.2, 1.2, 1.2];
@@ -50,7 +50,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.png" />
       </Head>
-      {isMobile &&  <WipMobileModal setModal={setIsMobile}/>}
+      {/* {isMobile &&  <WipMobileModal setModal={setIsMobile}/>} */}
       <main className={isRotating ? "cursor-grabbing" : "cursor-grab"}>
 
         <Navigation />

@@ -98,3 +98,10 @@
     transform: scale(0.95);
   }
   
+
+  @media only  screen and (max-width: 800px) {
+    .currentStageCard{
+      padding: 1.5vh 4vw;
+      font-size: 2vh;
+    }
+  }

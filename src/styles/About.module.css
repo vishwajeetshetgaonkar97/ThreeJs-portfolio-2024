@@ -1,49 +1,52 @@
-
-.canvas{
+.canvas {
   position: fixed !important;
 }
 
-.main_container{
-display: flex;
-justify-content: center;
-position: absolute;
-top:6vh;
-width: 60vw;
-margin: 0 20%;
-padding: 4vh;
-/* background: radial-gradient(#ffffff56, rgba(255, 255, 255, 0.1)); */
-text-align: center;
-border-radius: 1%;
-font-family: "Lato", sans-serif;
-flex-direction: column;
-font-size: 2.7vh;
-line-height: 4.2vh;
+.main_container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 6vh;
+  width: 60vw;
+  margin: 0 20%;
+  padding: 4vh;
+  /* background: radial-gradient(#ffffff56, rgba(255, 255, 255, 0.1)); */
+  text-align: center;
+  border-radius: 1%;
+  font-family: "Lato", sans-serif;
+  flex-direction: column;
+  font-size: 2.7vh;
+  line-height: 4.2vh;
 }
 
-.heading{
+.heading {
   font-size: 3.6vh;
   padding: 5vh 0 2vh 0;
   line-height: 7vh;
   color: rgba(0, 0, 0, 0.9);
 }
 
-.heading span{
+.heading span {
   font-family: "Sacramento", cursive;
-  background: -webkit-linear-gradient(rgba(0, 162, 255, 0.845), rgb(102, 2, 138));
+  background: -webkit-linear-gradient(
+    rgba(0, 162, 255, 0.845),
+    rgb(102, 2, 138)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 6vh;
   font-weight: 600;
 }
 
-.description,.experience{
+.description,
+.experience {
   background: linear-gradient(#ffffff33, rgba(255, 255, 255, 0.066));
   padding: 2vh 2vw;
-  backdrop-filter: blur( 2px );
+  backdrop-filter: blur(2px);
 }
 
 /* this is photo grid layout for skills */
-.photoGrid{
+.photoGrid {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
@@ -51,7 +54,7 @@ line-height: 4.2vh;
   opacity: 0.95;
 }
 
-.photoGridColumn{
+.photoGridColumn {
   flex: 24%;
   max-width: 24%;
   padding: 0 0.5%;
@@ -61,52 +64,88 @@ line-height: 4.2vh;
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 
 .photoGridColumn img:hover {
   transform: scale(1.02);
 }
 
-.experience{
-padding: 1vh 0 2.8vh 0;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-wrap: wrap;
-margin-bottom: 5vh;
+.experience {
+  padding: 1vh 0 2.8vh 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 5vh;
 }
 
-.experienceHeading{
+.experienceHeading {
   width: 100%;
-  padding: 1vh 0 ;
+  padding: 1vh 0;
   font-size: 4vh;
-
 }
 
-
-.experienceCard{
- max-width: 25vw;
- margin: 1vh;
+.experienceCard {
+  max-width: 25vw;
+  margin: 1vh;
   justify-content: flex-start;
   text-align: left;
   padding: 1.5vh 1vw;
-  background: radial-gradient(rgba(255, 255, 255, 0.333), rgba(255, 255, 255, 0.066));
-  backdrop-filter: blur( 2px );
+  background: radial-gradient(
+    rgba(255, 255, 255, 0.333),
+    rgba(255, 255, 255, 0.066)
+  );
+  backdrop-filter: blur(2px);
 }
 
-.experienceCard ul{
-padding: 0 1vw;
-margin: 0;
-margin-top: 1.8vh;
+.experienceCard ul {
+  padding: 0 1vw;
+  margin: 0;
+  margin-top: 1.8vh;
 }
 
-.experienceCardHeading{
+.experienceCardHeading {
   font-weight: 600;
   text-align: center;
 }
 
-.experienceCardContent{
+.experienceCardContent {
   font-size: 2.4vh;
   text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .main_container {
+    top: 2vh;
+    width: 98vw;
+    margin: 0 0%;
+    padding: 0.5vh;
+    font-size: 2.2vh;
+    line-height: 4.2vh;
+  }
+
+  .heading {
+    font-size: 3.2vh;
+  }
+
+  .experience {
+    padding: 1vh 0 2.8vh 0;
+    margin-bottom: 5vh;
+    flex-direction: column;
+  }
+
+  .experienceCard {
+    max-width: 90vw;
+  }
+
+  .experienceCard ul {
+    padding: 0 10vw;
+    margin-top: 1vh;
+  }
+
+  .experienceCardContent {
+    font-size: 2.2vh;
+    text-align: center;
+  }
 }
