@@ -5,8 +5,8 @@ const HomeInfo = ({ currentStage }) => {
     return (
       <div className={styles.currentStageCard}>
         <div className={styles.currentStageTitle}>
-          Hello! 🏴‍☠️
-          <br /> I’m <span>Vishwajeet Shetgaonker</span>, <br />a Toronto-based
+          Hello! 🏴‍☠️<br /> <div className={styles.subHead}>Explore me Treasure Isle!</div>
+       I’m <span>Vishwajeet Shetgaonker</span>, <br />a Toronto-based
           Designer and Developer.
         </div>
       </div>

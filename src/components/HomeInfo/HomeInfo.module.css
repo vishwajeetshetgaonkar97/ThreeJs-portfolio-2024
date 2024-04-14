@@ -32,6 +32,11 @@
     /* font-family: "Sacramento", cursive; */
   }
 
+  .subHead{
+    padding: 0.5vh 0;
+    
+  }
+
   .currentStageCardContent{
     padding: 0.5vh;
   }

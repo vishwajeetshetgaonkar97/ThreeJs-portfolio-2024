@@ -76,6 +76,7 @@
     background: linear-gradient(#ffffff, rgba(255, 255, 255, 0.751));
     backdrop-filter: blur(5px);
     transition: all 0.5s ease-in-out;
+    padding-bottom: 5vh;
   }
   .linksContainer div {
     padding: 2vh 0;
