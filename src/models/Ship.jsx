@@ -113,6 +113,39 @@ export function Ship({
       setCurrentStage(stage);
     }
   });
+
+  // Add this inside your useEffect hook
+useEffect(() => {
+  // Check if the browser supports DeviceOrientationEvent
+  if (window.DeviceOrientationEvent) {
+    window.addEventListener("deviceorientation", handleDeviceOrientation);
+  } else {
+    console.log("Sorry, your browser doesn't support Device Orientation");
+  }
+
+  // Remove event listener when component unmounts
+  return () => {
+    if (window.DeviceOrientationEvent) {
+      window.removeEventListener("deviceorientation", handleDeviceOrientation);
+    }
+  };
+}, []);
+
+// Handle device orientation changes
+const handleDeviceOrientation = (event) => {
+  const { alpha, beta, gamma } = event;
+
+  // Convert degrees to radians
+  const alphaRad = alpha * (Math.PI / 180);
+  const betaRad = beta * (Math.PI / 180);
+  const gammaRad = gamma * (Math.PI / 180);
+
+  // Use these values to update your component's rotation
+  islandRef.current.rotation.y = gammaRad;
+  islandRef.current.rotation.x = betaRad;
+  islandRef.current.rotation.z = alphaRad;
+};
+
   
 
   return (
