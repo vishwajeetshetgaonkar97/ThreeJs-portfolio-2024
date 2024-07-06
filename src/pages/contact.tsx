@@ -7,8 +7,8 @@ import { Suspense, useEffect, useRef, useState } from "react";
 import Loader from "../components/Loader/Loader";
 import Navigation from "../components/Navigation/Navigation";
 import Footer from "@/components/Footer/Footer";
-import GlobalLoader from '../components/GlobalLoader/GlobalLoader'
-
+import GlobalLoader from "../components/GlobalLoader/GlobalLoader";
+import CanvasComponent from "@/components/CanvasComponent/CanvasComponent";
 
 export default function Contact() {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,23 +34,16 @@ export default function Contact() {
         <Navigation />
 
         {/* {  isLoading &&  <GlobalLoader/>} */}
-        <Canvas className={styles.canvas}>
-          <Suspense fallback={<Loader setIsLoading={setIsLoading} />}>
-            <directionalLight position={[1, 1, 1]} intensity={1} />
-            <ambientLight intensity={0.5} />
-            <pointLight position={[10, 5, 10]} intensity={1} />
-            <spotLight
-              position={[0, 50, 10]}
-              angle={0.15}
-              penumbra={1}
-              intensity={1}
-            />
-            <hemisphereLight groundColor="#000000" intensity={1} />
-
-            <Sky isRotating={true} />
-            <Bird />
-          </Suspense>
-        </Canvas>
+        <div className={styles.canvas}>
+          <CanvasComponent
+            isRotating
+            isOnlyBg
+            setIsRotating={undefined}
+            setCurrentStage={undefined}
+            islandPosition={undefined}
+            islandScale={undefined}
+          />
+        </div>
 
         <div className={styles.main_container}>
           <div className={styles.heading}>Hello! 🏴‍☠️</div>
@@ -75,33 +68,21 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                className={styles.imgIcons}
-                alt=""
-                src="/github.png"
-              />
+              <img className={styles.imgIcons} alt="" src="/github.png" />
             </a>
             <a
               href="https://www.linkedin.com/in/vishwajeet-shetgaonkar-42529618b/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                className={styles.imgIcons}
-                alt=""
-                src="/linkedin.png"
-              />
+              <img className={styles.imgIcons} alt="" src="/linkedin.png" />
             </a>
             <a
               href="https://twitter.com/vshetgaonkar97"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                className={styles.imgIcons}
-                alt=""
-                src="/twitter.png"
-              />
+              <img className={styles.imgIcons} alt="" src="/twitter.png" />
             </a>
 
             <a
@@ -109,15 +90,11 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                className={styles.imgIcons}
-                alt=""
-                src="/dribble.png"
-              />
+              <img className={styles.imgIcons} alt="" src="/dribble.png" />
             </a>
           </div>
         </div>
-        <Footer/>
+        <Footer />
       </main>
     </>
   );

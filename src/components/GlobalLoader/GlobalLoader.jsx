@@ -1,16 +1,18 @@
 import { Html } from "@react-three/drei";
-import { Canvas, useThree  } from "@react-three/fiber";
 import { useEffect, useRef } from "react";
-import Image from 'next/image'
-import styles from './Loader.module.css';
-
+import Image from "next/image";
+import styles from "./Loader.module.css";
 
 const Loader = () => {
 
+
   return (
     <div className={styles.loaderContainer}>
-
-<div className={styles["traffic-loader"]}></div>
+      <span>Welcome to my world! </span>
+      I'm Vishwajeet Shetgaonker, a Toronto-based Designer and Developer.
+      <div className={styles.loader}>
+        <div className={styles.inner_loader}></div>
+      </div>
     </div>
   );
 };

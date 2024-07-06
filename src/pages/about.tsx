@@ -8,6 +8,7 @@ import Loader from "../components/Loader/Loader";
 import Navigation from "../components/Navigation/Navigation";
 import Footer from "@/components/Footer/Footer";
 import GlobalLoader from '../components/GlobalLoader/GlobalLoader'
+import CanvasComponent from "@/components/CanvasComponent/CanvasComponent";
 
 
 export default function About() {
@@ -41,23 +42,17 @@ export default function About() {
         <Navigation />
 
         {/* {  isLoading &&  <GlobalLoader/>} */}
-        <Canvas className={styles.canvas}>
-          <Suspense fallback={<Loader setIsLoading={setIsLoading} />}>
-            <directionalLight position={[1, 1, 1]} intensity={1} />
-            <ambientLight intensity={0.5} />
-            <pointLight position={[10, 5, 10]} intensity={1} />
-            <spotLight
-              position={[0, 50, 10]}
-              angle={0.15}
-              penumbra={1}
-              intensity={1}
-            />
-            <hemisphereLight groundColor="#000000" intensity={1} />
+        <div className={styles.canvas}>
+          <CanvasComponent
+            isRotating
+            isOnlyBg
+            setIsRotating={undefined}
+            setCurrentStage={undefined}
+            islandPosition={undefined}
+            islandScale={undefined}
+          />
+        </div>
 
-            <Sky isRotating={true} />
-            <Bird />
-          </Suspense>
-        </Canvas>
 
         <div className={styles.main_container}>
           <div className={styles.heading}>

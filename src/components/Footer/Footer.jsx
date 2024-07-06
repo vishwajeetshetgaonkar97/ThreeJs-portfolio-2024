@@ -5,7 +5,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className={styles.footer}>
-      Copyright © 2022 Vishwajeet Shetgaonkar | All rights reserved
+      Copyright © 2024 Vishwajeet Shetgaonkar | All rights reserved
     </div>
   );
 };

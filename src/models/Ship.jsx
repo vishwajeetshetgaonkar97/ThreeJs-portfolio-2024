@@ -135,3 +135,4 @@ export function Ship({
 }
 
 useGLTF.preload("/ship.glb");
+
