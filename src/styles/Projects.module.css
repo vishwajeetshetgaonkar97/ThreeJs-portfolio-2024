@@ -44,30 +44,32 @@ backdrop-filter:  blur(2px); */
 .cardWrapper {
   background: linear-gradient(#ffffff90, rgba(255, 255, 255, 0.066));
   backdrop-filter: blur(5px);
-  margin: 2vh;
+  margin: 1.5vh;
   display: flex;
   flex-direction: column;
   width: calc(32vh * (16 / 9));
   opacity: 0.95;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
+  padding: 2vh 1vw 0 1vw;
 }
 
 .cardWrapper:hover {
   scale: 1.01;
   backdrop-filter: blur(12px);
-  background: linear-gradient(#0088ffd6, rgba(255, 255, 255, 0.333));
+  background: radial-gradient(rgba(0, 166, 255, 0.888)rgba(255, 255, 255, 0.333));
 }
 
 .cardWrapper img {
   height: 32vh;
   width: calc(32vh * (16 / 9));
+
 }
 
 .cardWrapperHeading {
-  font-size: 2.8vh;
+  font-size: 3.4vh;
+  font-weight: 800;
   padding: 1vh 0 0.4vh 0;
-  font-weight: 600;
 }
 
 .cardWrapperDescription {

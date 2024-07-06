@@ -7,7 +7,6 @@ import { Suspense, useEffect, useRef, useState } from "react";
 import Loader from "../components/Loader/Loader";
 import Navigation from "../components/Navigation/Navigation";
 import Footer from "@/components/Footer/Footer";
-import GlobalLoader from '../components/GlobalLoader/GlobalLoader'
 import CanvasComponent from "@/components/CanvasComponent/CanvasComponent";
 
 

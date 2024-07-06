@@ -60,28 +60,28 @@ export default function Projects() {
             <div
               className={styles.cardWrapper}
               onClick={() => {
-                window.open(
-                  "https://dribbble.com/shots/18927410-Sport-OTT-Dashboard?utm_source=Clipboard_Shot&utm_campaign=Shetgaonkar&utm_content=Sport%20OTT%20Dashboard&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=Shetgaonkar&utm_content=Sport%20OTT%20Dashboard&utm_medium=Social_Share"
-                );
+               location.href="/projects/SarvaDashboard"
               }}
             >
-              <img src="/DashboardDesign.png" alt="dashboard" />
+              <img src="/sarvaIntroImage.png" alt="sarve" />
               <div className={styles.cardWrapperHeading}>
-                Cloud Studio Dashboard
+                Sarva Dashboard
               </div>
               <div className={styles.cardWrapperDescription}>
-                A dashboard prototype was developed to oversee the end-to-end
-                functionality of a sport-tech SaaS product.
+                A dashboard for displaying air quality conditions
+                for buildings and surrounding areas on a map,
+                along with additional relevant information.
               </div>
             </div>
 
             <div
               className={styles.cardWrapper}
               onClick={() => {
-                window.open("https://www.producthunt.com/products/spotfind");
+                location.href="/projects/SpotFind"
+                // window.open("https://www.producthunt.com/products/spotfind");
               }}
             >
-              <img src="/Spot-find.png" alt="dashboard" />
+              <img src="/spotFindIntroImage.png" alt="dashboard" />
               <div className={styles.cardWrapperHeading}>Spot-Find</div>
               <div className={styles.cardWrapperDescription}>
                 SpotFind is a music discovery tool to help you in times where

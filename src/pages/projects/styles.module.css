@@ -1,0 +1,230 @@
+.canvas {
+    position: fixed !important;
+  }
+  
+  .main_container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 4vh;
+    width: 90vw;
+    margin: 2% 2%;
+    padding: 4vh;
+    /* background: linear-gradient(#ffffff33, rgba(255, 255, 255, 0.066));
+  backdrop-filter:  blur(2px); */
+    text-align: center;
+    border-radius: 1%;
+    font-family: "Lato", sans-serif;
+    flex-direction: column;
+    font-size: 4vh;
+    line-height: 4.2vh;
+    color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .headingContainer ,.mockupContainer,.bottomInfoContainer{
+    background: linear-gradient(#ffffff33, rgba(255, 255, 255, 0.21));
+    backdrop-filter: blur(7px);
+    width: 82vw;
+    margin: 0 4.5%;
+    padding: 8vh 2vw;
+    display: flex;
+  }
+
+  .mockupContainer{
+    padding: 0 4vw 0 0 ;
+    margin-top: 2vh;
+  }
+
+  .bottomInfoContainer{
+    margin-top: 2vh;
+    padding: 8vh 4vw 8vh 0 ;
+  }
+
+  .headingInfoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 2vh 2vw 0 2.5vw ;
+  }
+
+  .heading{
+    font-size:5.8vh;
+    font-weight: 900;
+  }
+  
+  .subHeading {
+    font-size: 2.8vh;
+    padding: 2.8vh 0 0.5vh 0;
+    line-height: 170%;
+  }
+
+  .subHeading span{
+    font-weight: 900;
+    color: #0066ff;
+  }
+
+  .topImage{
+    height: 55vh;
+  }
+
+  .toolsImage{
+    height: 9vh;
+    margin-left: -0.8vw;
+  }
+
+ 
+  .mockupImage{
+    height: 106vh;
+    width: calc(106vh * (16/9));
+  }
+
+  .bottomInfoDescription{
+    font-size: 2.6vh;
+    padding: 1vh 0vw 0 4.5vw;
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+
+
+
+  
+  .buttonContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+  }
+  
+  .cssbuttons-io-button {
+    background: rgba(0, 72, 255, 0.598);
+    color: white;
+    font-family: inherit;
+    padding: 0.2vh;
+    padding-left: 2vh;
+    font-size: 2vh;
+    font-weight: 500;
+    border-radius: 1vh;
+    border: none;
+    /* letter-spacing: 0.05em; */
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em rgba(3, 104, 38, 0.329);
+    overflow: hidden;
+    position: relative;
+    height: 6vh;
+    padding-right: 7.8vh;
+    cursor: pointer;
+  text-transform: capitalize;
+  }
+  
+  .cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    right: 0.25em;
+    transition: all 0.3s;
+  }
+  
+  .cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+  }
+  
+  .cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: rgb(0, 102, 255);
+  }
+  
+  .cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+  }
+  
+  .cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+  }
+  
+
+  @media only screen and (max-width: 800px) {
+    .main_container {
+      top: 6vh;
+      width: 100vw;
+      margin: 2% 0%;
+      padding: 0vh;
+      font-size: 3.4vh;
+    }
+  
+    .headingContainer,.bottomInfoContainer {
+      width: 97vw;
+      margin: 2vh 1.5% 0 1.5%;
+      padding: 2vh 0;
+      flex-direction: column-reverse;
+    }
+    .topImage{
+        height: 30vh;
+        width: calc(30vh * 16/9);
+        padding-left: 1vw;
+      }
+
+    .headingInfoContainer{
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        padding: 2vh 2vw 0 2.5vw ;
+      }
+
+      .heading{
+        font-size:4.2vh;
+      }
+      
+      .subHeading {
+        font-size: 2.4vh;
+        padding: 1.8vh 0 0.5vh 0;
+        line-height: 170%;
+        text-align: center;
+      }
+
+      .mockupImage{
+        display: none;
+      }
+    
+      .bottomImage{
+        height: calc(100% * (9/16));
+        width: 100%;
+      }
+      .bottomInfoContainer{
+        margin-top: 0vh;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 3vh;
+
+      }
+      .bottomInfoDescription{
+        font-size: 2.6vh;
+        padding: 2vh 4vw;
+        align-items: center;
+        text-align: center;
+      }
+
+      .cssbuttons-io-button {
+       
+       
+        position: relative;
+        height: 6vh;
+        padding-right: 35vw;
+        padding-left: 35vw;
+        cursor: pointer;
+      text-transform: capitalize;
+      }
+  
+  }
+  
