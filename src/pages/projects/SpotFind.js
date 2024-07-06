@@ -42,7 +42,7 @@ const SpotFind = (props) => {
                 height={100}
                 src="/spotFindTools.png"
                 alt="spotfindarva tools"
-                className={styles.toolsImage}
+                className={`${styles.toolsImage} ${styles.sfToolsImage}`}
               />
                   <div className={styles.buttonContainer}>
           <button className={styles["cssbuttons-io-button"]} onClick={() => {

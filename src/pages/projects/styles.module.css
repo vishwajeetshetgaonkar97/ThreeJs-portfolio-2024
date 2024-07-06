@@ -70,10 +70,16 @@
   }
 
   .toolsImage{
-    height: 9vh;
+    height: 10vh;
     margin-left: -0.8vw;
   }
 
+  .sfToolsImage{
+    width:33vh;
+  }
+  .svToolsImage{
+    width:28vh;
+  }
  
   .mockupImage{
     height: 106vh;

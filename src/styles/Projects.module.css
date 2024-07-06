@@ -50,7 +50,7 @@ backdrop-filter:  blur(2px); */
   width: calc(32vh * (16 / 9));
   opacity: 0.95;
   cursor: pointer;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in;
   padding: 2vh 1vw 0 1vw;
 }
 

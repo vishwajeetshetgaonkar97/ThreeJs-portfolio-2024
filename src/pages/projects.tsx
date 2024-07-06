@@ -60,24 +60,22 @@ export default function Projects() {
             <div
               className={styles.cardWrapper}
               onClick={() => {
-               location.href="/projects/SarvaDashboard"
+                location.href = "/projects/SarvaDashboard";
               }}
             >
               <img src="/sarvaIntroImage.png" alt="sarve" />
-              <div className={styles.cardWrapperHeading}>
-                Sarva Dashboard
-              </div>
+              <div className={styles.cardWrapperHeading}>Sarva Dashboard</div>
               <div className={styles.cardWrapperDescription}>
-                A dashboard for displaying air quality conditions
-                for buildings and surrounding areas on a map,
-                along with additional relevant information.
+                A dashboard for displaying air quality conditions for buildings
+                and surrounding areas on a map, along with additional relevant
+                information.
               </div>
             </div>
 
             <div
               className={styles.cardWrapper}
               onClick={() => {
-                location.href="/projects/SpotFind"
+                location.href = "/projects/SpotFind";
                 // window.open("https://www.producthunt.com/products/spotfind");
               }}
             >
@@ -86,6 +84,20 @@ export default function Projects() {
               <div className={styles.cardWrapperDescription}>
                 SpotFind is a music discovery tool to help you in times where
                 you just can't seem to find something new to listen to.
+              </div>
+            </div>
+
+            <div
+              className={styles.cardWrapper}
+              onClick={() => {
+                location.href = "/projects/SvPlay";
+              }}
+            >
+              <img src="/svPlayIntroImage.png" alt="dashboard" />
+              <div className={styles.cardWrapperHeading}>SV-Play</div>
+              <div className={styles.cardWrapperDescription}>
+                A turf booking app for users in their locality with the
+                capability to share it on multiple platforms
               </div>
             </div>
 
