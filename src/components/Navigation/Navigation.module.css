@@ -15,7 +15,7 @@
 .logo {
   height: 4vh;
   width: 9vh;
-  padding: 2vh;
+  padding: 2vh 2vh 2vh 0;
   border: 2vh;
   filter: invert(100%);
 }

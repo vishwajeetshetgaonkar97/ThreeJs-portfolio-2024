@@ -8,7 +8,10 @@ import Footer from "../components/Footer/Footer";
 import GlobalLoader from "../components/GlobalLoader/GlobalLoader";
 import CanvasComponent from "../components/CanvasComponent/CanvasComponent";
 
+
 export default function Home() {
+
+
   const [isRotating, setIsRotating] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [currentStage, setCurrentStage] = useState(1);
@@ -33,6 +36,8 @@ export default function Home() {
     setIsMobile(window.innerWidth < 868);
   }, []);
   console.log("window width", isMobile);
+
+
 
   return (
     <>
