@@ -16,14 +16,14 @@ const CanvasComponent = ({
   islandScale ,
   isOnlyBg=false,
 }) => {
-  const [isPlayingMusic, setIsPlayingMusic] = useState(true);
+  const [isPlayingMusic, setIsPlayingMusic] = useState(false);
 
   const audioRef = useRef(null);
 
 
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.volume = 0.2; // Set the volume to 0.5
+      audioRef.current.volume = 0.1; // Set the volume to 0.5
     }
     if (isPlayingMusic) {
       audioRef.current.play();

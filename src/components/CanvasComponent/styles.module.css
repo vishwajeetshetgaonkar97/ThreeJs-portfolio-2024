@@ -6,3 +6,12 @@
     height: 6vh;
     cursor: pointer;
   }
+
+  @media only screen and (max-width: 800px) {
+
+    .audioIcon{
+      top: 94vh;
+      height: 5vh;
+     
+    }
+  }
