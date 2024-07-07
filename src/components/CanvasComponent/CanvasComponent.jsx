@@ -16,6 +16,7 @@ const CanvasComponent = ({
   islandPosition,
   islandScale,
   isOnlyBg = false,
+  onLoadComplete // Add prop for onLoadComplete callback
 }) => {
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -62,6 +63,12 @@ const CanvasComponent = ({
       setIsHovered(false);
     }, 5000);
   };
+
+  useEffect(() => {
+    if (isHydrated && onLoadComplete) {
+      onLoadComplete(); // Invoke onLoadComplete when hydrated
+    }
+  }, [isHydrated, onLoadComplete]);
 
   if (!isHydrated) {
     // Render fallback until the hydration is complete

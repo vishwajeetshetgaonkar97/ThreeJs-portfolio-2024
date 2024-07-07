@@ -97,3 +97,22 @@ background-image: linear-gradient(to left, rgba(46, 2, 104, 0.863), rgb(4, 68, 1
     transform: translateX(calc(-100% + 10px));
   }
 }
+
+@media only screen and (max-width: 800px) {
+
+  .loaderContainer{
+    width: 96vw;
+   padding: 0 2vw;
+    font-size: 2.8vh;
+   color: rgba(0, 0, 0, 0.904);
+   top: 0;
+  text-align: center;
+  }
+
+  
+.loaderContainer span{
+ font-size: 9vh;
+ padding-bottom: 2vh;
+}
+
+}
