@@ -1,102 +1,149 @@
+.audioIcon {
+  position: absolute;
+  left: 1vw;
+  top: 92vh;
+  height: 6vh;
+  width: 6vh;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-  .audioIcon{
-    position: absolute;
-    left: 1vw;
-    top: 92vh;
-    height: 6vh;
-    width: 6vh;
-    cursor: pointer;
+.compassContainer {
+  position: absolute;
+  right: 1vw;
+  top: 70vh;
+  height: 27vh;
+  width: 37vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Lato", sans-serif;
+  transform: scale(1);
+  transition: all 0.5s ease;
+}
+
+.compassInnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.compassGif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform: scale(0.5);
+  /* transform: scale(1.2); */
+  padding: 0;
+  transition: all 0.8s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 4vh;
+  right: -5vw;
+}
+
+.compassGifHovered {
+  position: relative;
+  transform: scale(1.2);
+  padding: 0.5vh 0.5vh 0 0.5vh;
+  right: 0vw;
+  top: 0vh;
+}
+
+
+.compassText {
+  font-size: 2.2vh;
+  color: rgb(66, 32, 10);
+  width: 100%;
+  text-align: center;
+  height: fit-content;
+  transition: all 0.8s ease;
+  padding: 1vh 0.5vw;
+  position: relative;
+  z-index: 4 !important;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.compassGifHovered ~ .compassText {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 1s;
+}
+
+.compassText:hover {
+  background: linear-gradient(#ffffff58, rgba(255, 255, 255, 0.422));
+  backdrop-filter: blur(7px);
+}
+
+.compassInnerText {
+  width: fit-content;
+  height: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.compassGifHovered ~ .compassInnerText {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 1s;
+}
+.compassInnerTText,
+.compassInnerDText {
+  margin-left: -0.4vw;
+}
+
+.compassInnerDText {
+  padding: 1vh auto;
+}
+
+.bottomInfo {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: rgba(240, 248, 255, 0.836);
+  font-size: 2vh;
+  padding-bottom: 2vh;
+  visibility: hidden;
+}
+
+.bottomInfo span {
+  padding: 0.2vh;
+  border-radius: 0.1vh;
+  font-size: 2.2vh;
+  color: rgba(66, 32, 10, 0.676);
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 800px) {
+  .audioIcon {
+    top: 94vh;
+    height: 5vh;
+    width: 5vh;
   }
 
-  .compassContainer{
-    position: absolute;
-    right: 1vw;
-    top: 70vh;
-    height: 27vh;
-    width: 37vh;
-    display: flex;
-    flex-direction: column;
-    font-family: "Lato", sans-serif;
-    transform: scale(0.9);
-    transition: all 0.5s ease;
+  .compassContainer {
+    right: 2vw;
+    top: 60vh;
+    height: 30vh;
+    width: 40vh;
   }
 
-  .compassInnerContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  }
-
-  .compassGif{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    transform: scale(1.2);
-    padding: 0.5vh 0.5vh 0 0.5vh;
-  }
-
-  .compassText{
-    font-size: 2.2vh;
-    /* font-weight: 900; */
-    color: rgb(66 32 10);
-    width: 100%;
-    text-align: center;
-    height: fit-content;
-    transition: all 0.8s ease;
-    padding: 1vh 0.5vw;
-    position: relative;
-    z-index: 4 !important;
-    cursor: pointer;
-    font-weight: 600;
-  }
-
-  .compassText:hover{
-    /* color: #7d4eff; */
-    background: linear-gradient(#ffffff58, rgba(255, 255, 255, 0.422));
-    backdrop-filter: blur(7px);
-  }
-
-  .compassInnerText{
-    width: fit-content;
-    height: 80%;
-    display: flex;
-    align-items: center;
-  }
-  .compassInnerTText,.compassInnerDText{
-    margin-left: -0.4vw;
-  }
-  .compassInnerDText{
-    padding: 1vh auto;
-  }
-
-  .bottomInfo{
-    display: flex;
-    width: 100%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    color: rgba(240, 248, 255, 0.836);
+  .compassText {
     font-size: 2vh;
-    padding-bottom: 2vh;
-    display: none;
   }
 
-  .bottomInfo span{
-   padding: 0.2vh;
-   /* border: 1px solid white; */
-  
-   border-radius: 0.1vh;
-   font-size: 2.2vh;
-   color: rgba(66, 32, 10, 0.676);
-   font-weight: 700;
+  .bottomInfo {
+    font-size: 1.8vh;
   }
-  @media only screen and (max-width: 800px) {
 
-    .audioIcon{
-      top: 94vh;
-      height: 5vh;
-     
-    }
+  .bottomInfo span {
+    font-size: 2vh;
   }
+
+  .compassContainer {
+   visibility: hidden;
+  }
+}

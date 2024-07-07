@@ -55,7 +55,7 @@ export default function Home() {
 
           {/* {!isMobile && isLoading && <GlobalLoader />} */}
 
-          <>
+          <div className={styles.canvas}>
             <div className={styles.stageContainer}>
               {currentStage && <HomeInfo currentStage={currentStage} />}
             </div>
@@ -66,7 +66,7 @@ export default function Home() {
               islandPosition={islandPosition}
               islandScale={islandScale}
             />
-          </>
+          </div>
 
           {!isRotating && (
             <div className={styles.guidance_Icon_container}>
