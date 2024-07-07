@@ -113,10 +113,9 @@ const CanvasComponent = ({
       />
 
       {!isOnlyBg && (
-        <div className={styles.compassContainer}>
+        <div className={`${styles.compassContainer} ${isHovered && styles.compassContainerHovered}`}>
           <div
-            className={`${styles.compassText} ${styles.compassInnerTText}`}
-            style={{ display: isHovered ? "block" : "none" }}
+            className={`${styles.compassText} ${styles.compassInnerTText} ${isHovered ? styles.displayBlock : styles.displayNone}`}
             onClick={() => {
               location.href = "/";
             }}
@@ -125,8 +124,7 @@ const CanvasComponent = ({
           </div>
           <div className={styles.compassInnerContainer}>
             <div
-              className={`${styles.compassText} ${styles.compassInnerText}`}
-              style={{ display: isHovered ? "flex" : "none" }}
+              className={`${styles.compassText} ${styles.compassInnerText} ${isHovered ? styles.displayFlex : styles.displayNone}`}
               onClick={() => {
                 location.href = "/projects";
               }}
@@ -141,8 +139,7 @@ const CanvasComponent = ({
               <Lottie animationData={compassAnimation} loop={true} />
             </div>
             <div
-              className={`${styles.compassText} ${styles.compassInnerText}`}
-              style={{ display: isHovered ? "flex" : "none" }}
+              className={`${styles.compassText} ${styles.compassInnerText} ${isHovered ? styles.displayFlex : styles.displayNone}`}
               onClick={() => {
                 location.href = "/about";
               }}
@@ -151,8 +148,7 @@ const CanvasComponent = ({
             </div>
           </div>
           <div
-            className={`${styles.compassText} ${styles.compassInnerDText}`}
-            style={{ display: isHovered ? "block" : "none" }}
+            className={`${styles.compassText} ${styles.compassInnerDText} ${isHovered ? styles.displayBlock : styles.displayNone}`}
             onClick={() => {
               location.href = "/contact";
             }}

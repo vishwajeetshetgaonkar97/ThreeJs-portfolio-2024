@@ -12,13 +12,18 @@
   position: absolute;
   right: 1vw;
   top: 70vh;
-  height: 27vh;
+  max-height: 27vh;
   width: 37vh;
   display: flex;
   flex-direction: column;
   font-family: "Lato", sans-serif;
   transform: scale(1);
   transition: all 0.5s ease;
+}
+
+.compassContainerHovered{
+  transition-delay: 0.5s;
+  height: 5vh;
 }
 
 .compassInnerContainer {
@@ -32,22 +37,25 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  transform: scale(0.5);
-  /* transform: scale(1.2); */
+  height: 18vh;
+  width: calc(18vh * 1/1);
+  transform: scale(1.2);
   padding: 0;
-  transition: all 0.8s ease;
+  transition: all 0.8s ease-in-out;
   cursor: pointer;
-  position: absolute;
-  top: 4vh;
-  right: -5vw;
+  position: relative;
+  top: 5.4vh;
+  right: -3.8vw;
 }
 
 .compassGifHovered {
   position: relative;
-  transform: scale(1.2);
+  height: 18vh;
   padding: 0.5vh 0.5vh 0 0.5vh;
+  transform: scale(1.2);
   right: 0vw;
   top: 0vh;
+  
 }
 
 
@@ -57,7 +65,7 @@
   width: 100%;
   text-align: center;
   height: fit-content;
-  transition: all 0.8s ease;
+  transition: all 0s ease;
   padding: 1vh 0.5vw;
   position: relative;
   z-index: 4 !important;
@@ -68,7 +76,7 @@
 .compassGifHovered ~ .compassText {
   opacity: 1;
   transform: scale(1);
-  transition-delay: 1s;
+  transition-delay: 0s;
 }
 
 .compassText:hover {
@@ -86,7 +94,7 @@
 .compassGifHovered ~ .compassInnerText {
   opacity: 1;
   transform: scale(1);
-  transition-delay: 1s;
+  transition-delay: 0s;
 }
 .compassInnerTText,
 .compassInnerDText {
@@ -115,6 +123,14 @@
   font-size: 2.2vh;
   color: rgba(66, 32, 10, 0.676);
   font-weight: 700;
+}
+
+.displayBlock {
+ visibility: visible;
+}
+
+.displayNone {
+  visibility: hidden;
 }
 
 @media only screen and (max-width: 800px) {
