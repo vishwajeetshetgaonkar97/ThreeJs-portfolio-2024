@@ -16,7 +16,7 @@ const CanvasComponent = ({
   islandPosition,
   islandScale,
   isOnlyBg = false,
-  onLoadComplete // Add prop for onLoadComplete callback
+  onLoadComplete = () => {}  // Add prop for onLoadComplete callback
 }) => {
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
