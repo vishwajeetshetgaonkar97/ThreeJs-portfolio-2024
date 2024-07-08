@@ -1,13 +1,13 @@
 .audioIcon {
-  position: absolute;
-  left: 1vw;
-  top: 92vh;
+  position: fixed; /* Change to fixed to ensure it stays in place relative to the viewport */
+  bottom: 2.4vh; /* Position 8% from the bottom of the viewport */
+  left: 1vw; /* Adjust as needed */
   height: 6vh;
   width: 6vh;
   cursor: pointer;
   transition: all 0.3s ease;
+  z-index: 1000; /* Ensure it has a higher z-index than other elements */
 }
-
 .compassContainer {
   position: absolute;
   right: 1vw;
@@ -135,9 +135,8 @@
 
 @media only screen and (max-width: 800px) {
   .audioIcon {
-    top: auto;
-    bottom: 4vh;
-    left: 2vw;
+    bottom: 4vh; /* Adjust the position for mobile devices */
+    left: 2vw; /* Adjust as needed */
     height: 5vh;
     width: 5vh;
   }
