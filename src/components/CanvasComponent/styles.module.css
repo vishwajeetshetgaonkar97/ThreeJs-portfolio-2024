@@ -135,7 +135,7 @@
 
 @media only screen and (max-width: 800px) {
   .audioIcon {
-    top: 91.2vh;
+    top: 91.2%;
     left: 2vw;
     height: 5vh;
     width: 5vh;
@@ -143,7 +143,7 @@
 
   .compassContainer {
     right: 0vw;
-    top: 72.5vh;
+    top: 72.5%;
     max-height: 17vh;
     width: 24vh;
   }
@@ -155,7 +155,7 @@
     width: 74vw;
     right: 10vw;
     padding: 1vh 3vw;
-    top: 66vh;
+    top: 66%;
     background-color: rgba(255, 255, 255, 0.868);
     border-radius: 2vh;
   }
