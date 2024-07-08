@@ -21,7 +21,7 @@ export default function Home() {
       screenPosition = [0, 0, -1];
     } else {
       screenScale = [1.2, 1.2, 1.2];
-      screenPosition = [0, 0, -1];
+      screenPosition = [0, 0, -0.9];
     }
     return [screenScale, screenPosition];
   };
@@ -67,11 +67,12 @@ export default function Home() {
             <div className={styles.guidance_Icon_container}>
               <Image
                 className={styles.GuideIcon}
-                src={`/pressButton.png`}
+                src={`/dragHand.png`}
                 width={27}
                 height={27}
                 alt="guidence image"
               />
+              <div className={styles.GuideText}>Drag to Explore</div>
             </div>
           )}
           <Footer />
