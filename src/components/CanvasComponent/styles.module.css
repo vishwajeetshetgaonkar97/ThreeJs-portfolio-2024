@@ -135,7 +135,8 @@
 
 @media only screen and (max-width: 800px) {
   .audioIcon {
-    top: 91.2%;
+    top: auto;
+    bottom: 4%;
     left: 2vw;
     height: 5vh;
     width: 5vh;
