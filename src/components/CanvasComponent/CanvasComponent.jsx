@@ -64,6 +64,19 @@ const CanvasComponent = ({
     }, 5000);
   };
 
+  const handleTouchStart = () => {
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+    }
+    setIsHovered(true);
+  };
+
+  const handleTouchEnd = () => {
+    hoverTimeoutRef.current = setTimeout(() => {
+      setIsHovered(false);
+    }, 5000);
+  };
+
   useEffect(() => {
     if (isHydrated && onLoadComplete) {
       onLoadComplete(); // Invoke onLoadComplete when hydrated
@@ -98,71 +111,76 @@ const CanvasComponent = ({
           <Bird />
         </Canvas>
 
-        
-      <Image
-        height={50}
-        width={50}
-        className={styles.audioIcon}
-        src={!isPlayingMusic ? "/soundoff.png" : `/soundon.png`}
-        alt="jukebox"
-        onClick={() => setIsPlayingMusic(!isPlayingMusic)}
-      />
+        <Image
+          height={50}
+          width={50}
+          className={styles.audioIcon}
+          src={!isPlayingMusic ? "/soundoff.png" : `/soundon.png`}
+          alt="jukebox"
+          onClick={() => setIsPlayingMusic(!isPlayingMusic)}
+        />
 
-      {!isOnlyBg && (
-        <div className={`${styles.compassContainer} ${isHovered && styles.compassContainerHovered}`}>
-          <div
-            className={`${styles.compassText} ${styles.compassInnerTText} ${isHovered ? styles.displayBlock : styles.displayNone}`}
-            onClick={() => {
-              location.href = "/";
-            }}
+        {!isOnlyBg && (
+          <div 
+            className={`${styles.compassContainer} ${isHovered && styles.compassContainerHovered}`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
           >
-            Home
-          </div>
-          <div className={styles.compassInnerContainer}>
             <div
-              className={`${styles.compassText} ${styles.compassInnerText} ${isHovered ? styles.displayFlex : styles.displayNone}`}
+              className={`${styles.compassText} ${styles.compassInnerTText} ${isHovered ? styles.displayBlock : styles.displayNone}`}
               onClick={() => {
-                location.href = "/projects";
+                location.href = "/";
               }}
             >
-              Project
+              Home
+            </div>
+            <div className={styles.compassInnerContainer}>
+              <div
+                className={`${styles.compassText} ${styles.compassInnerText} ${isHovered ? styles.displayFlex : styles.displayNone}`}
+                onClick={() => {
+                  location.href = "/projects";
+                }}
+              >
+                Project
+              </div>
+              <div
+                className={`${styles.compassGif} ${isHovered && styles.compassGifHovered}`}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
+              >
+                <Lottie animationData={compassAnimation} loop={true} />
+              </div>
+              <div
+                className={`${styles.compassText} ${styles.compassInnerText} ${isHovered ? styles.displayFlex : styles.displayNone}`}
+                onClick={() => {
+                  location.href = "/about";
+                }}
+              >
+                About
+              </div>
             </div>
             <div
-              className={`${styles.compassGif} ${isHovered && styles.compassGifHovered}`}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              <Lottie animationData={compassAnimation} loop={true} />
-            </div>
-            <div
-              className={`${styles.compassText} ${styles.compassInnerText} ${isHovered ? styles.displayFlex : styles.displayNone}`}
+              className={`${styles.compassText} ${styles.compassInnerDText} ${isHovered ? styles.displayBlock : styles.displayNone}`}
               onClick={() => {
-                location.href = "/about";
+                location.href = "/contact";
               }}
             >
-              About
+              Contact
+            </div>
+            <div className={styles.bottomInfo}>
+              Press <span>N</span> <span>S</span> <span>E</span> <span>W</span> key to navigate
             </div>
           </div>
-          <div
-            className={`${styles.compassText} ${styles.compassInnerDText} ${isHovered ? styles.displayBlock : styles.displayNone}`}
-            onClick={() => {
-              location.href = "/contact";
-            }}
-          >
-            Contact
-          </div>
-          <div className={styles.bottomInfo}>
-            Press <span>N</span> <span>S</span> <span>E</span> <span>W</span> key to navigate
-          </div>
-        </div>
-      )}
-      
+        )}
       </Suspense>
 
       <audio ref={audioRef} src="/sakura.mp3" loop>
         Your browser does not support the <code>audio</code> element.
       </audio>
-
     </>
   );
 };
