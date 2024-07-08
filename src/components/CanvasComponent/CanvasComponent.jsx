@@ -77,7 +77,7 @@ const CanvasComponent = ({
 
   return (
     <>
-      <Suspense fallback={<GlobalLoader />}>
+      <Suspense fallback={"loading..."}>
         <Canvas>
           <directionalLight position={[1, 1, 1]} intensity={1} />
           <ambientLight intensity={1.5} />
@@ -97,12 +97,8 @@ const CanvasComponent = ({
           )}
           <Bird />
         </Canvas>
-      </Suspense>
 
-      <audio ref={audioRef} src="/sakura.mp3" loop>
-        Your browser does not support the <code>audio</code> element.
-      </audio>
-
+        
       <Image
         height={50}
         width={50}
@@ -160,6 +156,13 @@ const CanvasComponent = ({
           </div>
         </div>
       )}
+      
+      </Suspense>
+
+      <audio ref={audioRef} src="/sakura.mp3" loop>
+        Your browser does not support the <code>audio</code> element.
+      </audio>
+
     </>
   );
 };
