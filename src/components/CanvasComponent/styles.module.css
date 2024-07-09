@@ -1,6 +1,6 @@
 .audioIcon {
   position: fixed; /* Change to fixed to ensure it stays in place relative to the viewport */
-  bottom: 2.4vh; /* Position 8% from the bottom of the viewport */
+ top: 91.4vh; /* Position 8% from the bottom of the viewport */
   left: 1vw; /* Adjust as needed */
   height: 6vh;
   width: 6vh;
@@ -135,7 +135,7 @@
 
 @media only screen and (max-width: 800px) {
   .audioIcon {
-    bottom: 4vh; /* Adjust the position for mobile devices */
+    top: 91.4vh; /* Adjust the position for mobile devices */
     left: 2vw; /* Adjust as needed */
     height: 5vh;
     width: 5vh;
@@ -156,7 +156,7 @@
     right: 10vw;
     padding: 1vh 3vw;
     top: 66%;
-    background-color: rgba(255, 255, 255, 0.868);
+    background: radial-gradient( rgb(255, 255, 255), rgba(255, 255, 255, 0.091));
     border-radius: 2vh;
   }
   
