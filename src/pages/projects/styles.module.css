@@ -176,10 +176,23 @@
       flex-direction: column-reverse;
     }
     .topImage{
-        height: 30vh;
-        width: calc(30vh * 16/9);
+        width: 96vw;
+        height: calc(96vw * 9/16);
         padding-left: 1vw;
       }
+
+      
+  .toolsImage{
+    height: 10vh;
+    width: fit-content;
+  }
+
+  .sfToolsImage{
+    width:33vh;
+  }
+  .svToolsImage{
+    width:28vh;
+  }
 
     .headingInfoContainer{
         justify-content: center;
@@ -201,6 +214,7 @@
 
       .mockupImage{
         display: none;
+        
       }
     
       .bottomImage{
@@ -222,12 +236,10 @@
       }
 
       .cssbuttons-io-button {
-       
-       
         position: relative;
         height: 6vh;
-        padding-right: 35vw;
-        padding-left: 35vw;
+        padding-right: 32vw;
+        padding-left: 32vw;
         cursor: pointer;
       text-transform: capitalize;
       }
