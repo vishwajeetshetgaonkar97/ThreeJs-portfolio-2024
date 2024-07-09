@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./HomeInfo.module.css";
 
 const HomeInfo = ({ currentStage }) => {
@@ -16,9 +17,12 @@ const HomeInfo = ({ currentStage }) => {
     return (
       <div className={styles.currentStageCard}>
         <div className={styles.currentStageCardContent}>
-          🦜 <br />
-          Crafting User-Centric Skills Across Industries
+          🦜 <br/> <Image className={styles.skillsImage} src="/skills.png" height={10} width={150} alt="skills"/> <br />   
+          Crafting User-Centric Skills Across Industries <br />
+         
+         
         </div>
+       
         <div className={styles.buttonContainer}>
           <button className={styles["cssbuttons-io-button"]} onClick={() => {
               location.href = "/about";
@@ -83,7 +87,14 @@ const HomeInfo = ({ currentStage }) => {
         <div className={styles.currentStageCardContent}>
           💰 <br />
           Need a project done or looking for a Designer/Dev? <br /> i'm just a
-          message away.
+          message away!  <span
+            className={styles.email}
+            onClick={() => {
+              location.href = "mailto:hello@vish.world";
+            }}
+          >
+            hello@vish.world
+          </span>
         </div>
 
         <div className={styles.buttonContainer}>

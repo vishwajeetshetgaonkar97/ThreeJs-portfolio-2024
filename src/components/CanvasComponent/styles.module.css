@@ -203,7 +203,7 @@
   }
   
   .compassText:hover {
-    background: linear-gradient(#ffffff58, rgba(255, 255, 255, 0.422));
+    background: linear-gradient(#ffffff00, rgba(255, 255, 255, 0));
     backdrop-filter: blur(7px);
   }
   

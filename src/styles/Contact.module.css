@@ -48,6 +48,9 @@ line-height: 4.2vh;
   cursor: pointer;
   
 }
+.email:hover{
+  opacity: 0.8;
+}
 
 .Icons{
   display: flex;
