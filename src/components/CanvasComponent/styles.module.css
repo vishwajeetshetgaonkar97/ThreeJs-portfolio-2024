@@ -11,7 +11,7 @@
 .compassContainer {
   position: fixed;
   right: 1vw;
-  top: 70vh;
+  bottom: 2.4vh;
   max-height: 27vh;
   width: 37vh;
   display: flex;
@@ -23,13 +23,14 @@
 
 .compassContainerHovered{
   transition-delay: 0.5s;
-  height: 5vh;
+  height: fit-content;
 }
 
 .compassInnerContainer {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 18vh;
 }
 
 .compassGif {
@@ -86,7 +87,7 @@
 
 .compassInnerText {
   width: fit-content;
-  height: 80%;
+  height: 100%;
   display: flex;
   align-items: center;
 }
@@ -143,7 +144,7 @@
 
   .compassContainer {
     right: 0vw;
-    top: 72.5vh;
+    bottom:10.5vh;
     max-height: 17vh;
     width: 24vh;
   }
