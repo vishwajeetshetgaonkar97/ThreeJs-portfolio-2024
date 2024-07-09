@@ -9,7 +9,6 @@ import Navigation from "../components/Navigation/Navigation";
 import Footer from "@/components/Footer/Footer";
 import CanvasComponent from "@/components/CanvasComponent/CanvasComponent";
 
-
 export default function About() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -23,11 +22,6 @@ export default function About() {
   };
 
   const [islandScale, islandPosition] = adjustIslandForScreenSize();
-
-  
-  
-
-
 
   return (
     <>
@@ -51,7 +45,6 @@ export default function About() {
             islandScale={undefined}
           />
         </div>
-
 
         <div className={styles.main_container}>
           <div className={styles.heading}>
@@ -107,18 +100,23 @@ export default function About() {
           </div>
 
           <div className={styles.experience}>
-          <div className={`${styles.heading} ${styles.experienceHeading}`}>
-          Career Adventure! ☠️
-          </div>
+            <div className={`${styles.heading} ${styles.experienceHeading}`}>
+              Career Adventure! ☠️
+            </div>
             <div className={styles.experienceCard}>
-              <div className={styles.experienceCardHeading}>Freelancer (2023-presemt)</div>
-              <div  className={styles.experienceCardContent}>
+              <div className={styles.experienceCardHeading}>
+                Freelancer (2023-presemt)
+              </div>
+              <div className={styles.experienceCardContent}>
                 <ul>
                   <li>
-                    Completed 5+ projects in UI/UX Design & Front End
+                    Completed 8+ projects in UI/UX Design & Front End
                     Development.
                   </li>
-                  <li>Expertise in React JS, JavaScript, Figma, and CSS.</li>
+                  <li>
+                    Deliver innovative projects in the Sport, Environment,
+                    Gaming, Entertainment, and Community App industries..
+                  </li>
                   <li>
                     Collaborated with cross-functional teams to integrate user
                     feedback and optimize usability.
@@ -128,20 +126,25 @@ export default function About() {
             </div>
 
             <div className={styles.experienceCard}>
-              <div className={styles.experienceCardHeading}>Sportvot (2020-2022)</div>
-              <div  className={styles.experienceCardContent}>
+              <div className={styles.experienceCardHeading}>
+                Sportvot (2020-2022)
+              </div>
+              <div className={styles.experienceCardContent}>
                 <ul>
                   <li>
-                  Led design and development of Saas web applications for a sport-tech Startup.
+                    Led design and development of Saas web applications Product for a
+                    sport-tech Startup.
                   </li>
-                  <li>Complete product redesign from scratch  using Agile methodology.</li>
                   <li>
-                  Integrated over 80+ APIs with code base of over 1M+ line. 
+                    Complete product redesign from scratch using Agile
+                    methodology.
+                  </li>
+                  <li>
+                    Integrated over 80+ APIs with code base of over 1M+ line.
                   </li>
                 </ul>
               </div>
             </div>
-
           </div>
         </div>
         <Footer />

@@ -56,10 +56,10 @@ export default function Contact() {
           <div
             className={styles.email}
             onClick={() => {
-              location.href = "mailto:xyz@abc.com";
+              location.href = "mailto:hello@vish.world";
             }}
           >
-            Vshetgaonkar123@Gmail.com
+            hello@vish.world
           </div>
 
           <div className={styles.Icons}>
