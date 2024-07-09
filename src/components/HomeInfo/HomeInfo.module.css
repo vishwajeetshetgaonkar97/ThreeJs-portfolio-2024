@@ -131,5 +131,9 @@
       padding: 1.5vh 4vw;
       font-size: 2vh;
     }
-
+    .skillsImage{
+      height: 4vh;
+      width: calc(4vh * 4)
+    }
+  
   }
