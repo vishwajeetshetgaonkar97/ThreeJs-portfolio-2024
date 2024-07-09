@@ -9,7 +9,7 @@
   z-index: 1000; /* Ensure it has a higher z-index than other elements */
 }
 .compassContainer {
-  position: absolute;
+  position: fixed;
   right: 1vw;
   top: 70vh;
   max-height: 27vh;
