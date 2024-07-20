@@ -17,7 +17,7 @@ const HomeInfo = ({ currentStage }) => {
     return (
       <div className={styles.currentStageCard}>
         <div className={styles.currentStageCardContent}>
-          🦜 <br/> <Image className={styles.skillsImage} src="/skills.png" height={10} width={150} alt="skills"/> <br />   
+          🦜 <br/> <Image className={styles.skillsImage} src="/skills.png" height={250} width={250} alt="skills"/> <br />   
           Crafting User-Centric Skills Across Industries <br />
          
          

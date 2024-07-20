@@ -118,7 +118,7 @@ export default function Projects() {
               </div>
             </div>
 
-            <div
+            {/* <div
               className={styles.cardWrapper}
               onClick={() => {
                 window.open(
@@ -153,7 +153,7 @@ export default function Projects() {
                 feel, vibrant and nostalgic vibe, aiming to evoke feelings of
                 nostalgia, freedom, and the recollection of good old times.
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <Footer />

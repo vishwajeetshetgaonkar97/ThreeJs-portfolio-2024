@@ -2,7 +2,7 @@
   position: fixed;
   width: 100vw;
   height: 7vh;
-  z-index: 6;
+  z-index: 4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,6 +92,7 @@
     backdrop-filter: blur(5px);
     transition: all 0.5s ease-in-out;
     padding-bottom: 5vh;
+    z-index: 99;
   }
   .linksContainer div {
     padding: 2vh 0;

@@ -39,11 +39,44 @@ export default function Home() {
 
   return (
     <>
-      <Head>
+     <Head>
         <title>Vishwajeet Shetgaonkar</title>
-        <meta name="description" content="Vishwajeet Shetgaonker Portfolio" />
+        <meta name="description" content="Vishwajeet Shetgaonkar, a skilled UI/UX Designer and Front End Developer specializing in ReactJS and the MERN stack. Explore my portfolio and projects." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="keywords" content="Vishwajeet Shetgaonkar, UI/UX Designer, Front End Developer, ReactJS Specialist, MERN Stack Developer" />
         <link rel="icon" href="/logo.png" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://vish.world/" />
+        <meta property="og:title" content="Vishwajeet Shetgaonkar - UI/UX Designer & ReactJS Specialist" />
+        <meta property="og:description" content="Vishwajeet Shetgaonkar, a skilled UI/UX Designer and Front End Developer specializing in ReactJS and the MERN stack. Explore my portfolio and projects." />
+        <meta property="og:image" content="https://vish.world/logo.png" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://twitter.com/vshetgaonkar97" />
+        <meta property="twitter:title" content="Vishwajeet Shetgaonkar - UI/UX Designer & ReactJS Specialist" />
+        <meta property="twitter:description" content="Vishwajeet Shetgaonkar, a skilled UI/UX Designer and Front End Developer specializing in ReactJS and the MERN stack. Explore my portfolio and projects." />
+        <meta property="twitter:image" content="https://vish.world/logo.png" />
+
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "http://schema.org",
+            "@type": "Person",
+            "name": "Vishwajeet Shetgaonkar",
+            "jobTitle": "UI/UX Designer & Front End Developer",
+            "url": "https://vish.world",
+            "sameAs": [
+              "https://www.linkedin.com/in/vishwajeet-shetgaonkar",
+              "https://github.com/vishwajeetshetgaonkar97",
+              "https://twitter.com/vshetgaonkar97"
+            ],
+            "image": "https://vish.world/logo.png",
+            "description": "Vishwajeet Shetgaonkar, a skilled UI/UX Designer and Front End Developer specializing in ReactJS and the MERN stack. Explore my portfolio and projects.",
+          })}
+        </script>
       </Head>
     
       <Suspense fallback={<GlobalLoader />}>
