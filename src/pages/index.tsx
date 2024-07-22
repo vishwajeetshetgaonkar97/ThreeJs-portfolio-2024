@@ -44,7 +44,7 @@ export default function Home() {
         <meta name="description" content="Vishwajeet Shetgaonkar, a skilled UI/UX Designer and Front End Developer specializing in ReactJS and the MERN stack. Explore my portfolio and projects." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content="Vishwajeet Shetgaonkar, UI/UX Designer, Front End Developer, ReactJS Specialist, MERN Stack Developer" />
-        <link rel="icon" href="/logo.png" />
+        <link rel="icon" href="/vishLogo.png" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
