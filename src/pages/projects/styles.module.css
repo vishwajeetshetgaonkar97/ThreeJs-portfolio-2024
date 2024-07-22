@@ -87,6 +87,9 @@
     margin-left: 0vw;
   }
  
+  .f1ToolsImage{
+    width: 18vh;
+  }
   .mockupImage{
     height: 106vh;
     width: calc(106vh * (16/9));
@@ -209,6 +212,7 @@
 
       .heading{
         font-size:4.2vh;
+        text-align: center;
       }
       
       .subHeading {
@@ -219,8 +223,19 @@
       }
 
       .mockupImage{
-        display: none;
+        height: calc(100vw * 9/16);
+        width: 100vw;
         
+      }
+    
+      .mockupContainer{
+        padding: 0 4vw 0 0 ;
+        margin-top: 2vh;
+        background-color: rgba(0, 136, 255, 0);
+        margin: 0;
+        padding: 0;
+        width: fit-content;
+        filter: blur(0);
       }
     
       .bottomImage{
@@ -229,9 +244,10 @@
       }
       .bottomInfoContainer{
         margin-top: 0vh;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
-        padding-top: 3vh;
+        padding-top: 0vh;
+padding-bottom: 5vh;
 
       }
       .bottomInfoDescription{

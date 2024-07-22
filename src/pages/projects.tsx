@@ -117,17 +117,28 @@ export default function Projects() {
             <div
               className={styles.cardWrapper}
               onClick={() => {
-                window.open(
-                  "https://github.com/vishwajeetshetgaonkar97/CSS-F1"
-                );
+                location.href = "/projects/CssSanta";
               }}
             >
-              <img src="/f1.png" alt="dashboard" />
+              <img src="/cssSanta.png" alt="css santa" />
+              <div className={styles.cardWrapperHeading}>CSS Santa</div>
+              <div className={styles.cardWrapperDescription}>
+                A pure CSS representation of a Santa to explore
+                different CSS forms and properties.
+              </div>
+            </div>
+
+            <div
+              className={styles.cardWrapper}
+              onClick={() => {
+                location.href = "/projects/CssF1";
+              }}
+            >
+              <img src="/cssF1.png" alt="dashboard" />
               <div className={styles.cardWrapperHeading}>CSS F1 Car</div>
               <div className={styles.cardWrapperDescription}>
                 A pure CSS representation of a Formula 1 car to explore
-                different forms and properties, which helps in reducing
-                unnecessary use of plugins and packages for better optimization.
+                different CSS forms and properties.
               </div>
             </div>
 
