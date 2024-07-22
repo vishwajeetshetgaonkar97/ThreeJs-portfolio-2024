@@ -84,6 +84,7 @@
   width: 100%;
   padding: 1vh 0;
   font-size: 4vh;
+  font-weight: 600;
 }
 
 .experienceCard {
@@ -93,10 +94,10 @@
   text-align: left;
   padding: 1.5vh 1vw;
   background: radial-gradient(
-    rgba(255, 255, 255, 0.333),
+    rgba(255, 255, 255, 0.591),
     rgba(255, 255, 255, 0.066)
   );
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(411px);
 }
 
 .experienceCard ul {

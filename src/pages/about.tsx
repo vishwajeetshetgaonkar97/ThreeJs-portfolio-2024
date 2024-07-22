@@ -66,6 +66,8 @@ export default function About() {
                 <img src="/ReactJS.jpg" alt="grid Image 5" />
 
                 <img src="/js.jpeg" alt="grid Image 3" />
+               
+                <img src="/spline.png" alt="grid Image 9" />
                 <img src="/react native.png" alt="grid Image 6" />
                 <img src="/mongo.png" alt="grid Image 6" />
               </div>
@@ -85,7 +87,6 @@ export default function About() {
               <div className={styles.photoGridColumn}>
                 <img src="/figma.jpg" alt="grid Image 10" />
                 <img src="/xd.png" alt="grid Image 9" />
-
                 <img src="/ills.png" alt="grid Image 11" />
                 <img src="/express.jpg" alt="grid Image 8" />
               </div>
@@ -146,6 +147,9 @@ export default function About() {
               </div>
             </div>
           </div>
+
+         
+
         </div>
         <Footer />
       </main>
