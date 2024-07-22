@@ -42,6 +42,7 @@ export default function Contact() {
             setCurrentStage={undefined}
             islandPosition={undefined}
             islandScale={undefined}
+            showCompass
           />
         </div>
 

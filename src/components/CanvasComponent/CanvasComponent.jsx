@@ -16,6 +16,7 @@ const CanvasComponent = ({
   islandPosition,
   islandScale,
   isOnlyBg = false,
+  showCompass=false,
   onLoadComplete = () => {}  // Add prop for onLoadComplete callback
 }) => {
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
@@ -120,7 +121,7 @@ const CanvasComponent = ({
           onClick={() => setIsPlayingMusic(!isPlayingMusic)}
         />
 
-        {!isOnlyBg && (
+        {(!isOnlyBg || showCompass) && (
           <div 
             className={`${styles.compassContainer} ${isHovered && styles.compassContainerHovered}`}
             onMouseEnter={handleMouseEnter}
