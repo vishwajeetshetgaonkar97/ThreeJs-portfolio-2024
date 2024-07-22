@@ -21,7 +21,7 @@ export default function Home() {
       screenPosition = [0, 0, -1];
     } else {
       screenScale = [1.2, 1.2, 1.2];
-      screenPosition = [-0.1, 0, -2];
+      screenPosition = [0, 30, -1];
     }
     return [screenScale, screenPosition];
   };

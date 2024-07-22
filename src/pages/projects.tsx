@@ -57,6 +57,19 @@ export default function Projects() {
           </div>
 
           <div className={styles.cardsContainer}>
+          <div
+              className={styles.cardWrapper}
+              onClick={() => {
+                location.href = "/projects/CocaColaSpline";
+              }}
+            >
+              <img src="/3dCOcaCola.png" alt="coca cola" />
+              <div className={styles.cardWrapperHeading}>3D Coca-Cola Website Concept</div>
+              <div className={styles.cardWrapperDescription}>
+              A modern and engaging digital experience that leverages trending 3D immersive technologies.
+              </div>
+            </div>
+
             <div
               className={styles.cardWrapper}
               onClick={() => {

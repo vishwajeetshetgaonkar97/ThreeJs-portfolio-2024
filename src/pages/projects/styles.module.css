@@ -52,6 +52,7 @@
   .heading{
     font-size:5.8vh;
     font-weight: 900;
+    line-height: 110%;
   }
   
   .subHeading {
@@ -79,6 +80,11 @@
   }
   .svToolsImage{
     width:28vh;
+  }
+
+  .ccToolsImage{
+    width: 38vh;
+    margin-left: 0vw;
   }
  
   .mockupImage{

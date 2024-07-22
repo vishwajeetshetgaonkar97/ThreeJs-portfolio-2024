@@ -12,12 +12,15 @@ export function Ship({
   const { nodes, materials } = useGLTF("/ship.glb");
   const { gl, viewport } = useThree();
 
-  const skyRef = useRef();
   const lastX = useRef(0);
   const rotationSpeed = useRef(0);
   const dampingFactor = 0.95;
+  const scrollSpeed = useRef(0);
+  const scrollDamping = 0.9;
+  const isScrolling = useRef(false);
 
   const handlePointerDown = (event) => {
+    if (isScrolling.current) return;
     event.stopPropagation();
     event.preventDefault();
     setIsRotating(true);
@@ -27,12 +30,14 @@ export function Ship({
   };
 
   const handlePointerUp = (event) => {
+    if (isScrolling.current) return;
     event.stopPropagation();
     event.preventDefault();
     setIsRotating(false);
   };
 
   const handlePointerMove = (event) => {
+    if (isScrolling.current) return;
     event.stopPropagation();
     event.preventDefault();
     if (isRotating) {
@@ -47,12 +52,10 @@ export function Ship({
   const handleKeyDown = (event) => {
     if (event.key === "ArrowLeft") {
       if (!isRotating) setIsRotating(true);
-      islandRef.current.rotation.y += 0.005 * Math.PI;
-      rotationSpeed.current = 0.007;
+      rotationSpeed.current += 0.007;
     } else if (event.key === "ArrowRight") {
       if (!isRotating) setIsRotating(true);
-      islandRef.current.rotation.y -= 0.005 * Math.PI;
-      rotationSpeed.current = -0.007;
+      rotationSpeed.current -= 0.007;
     }
   };
 
@@ -60,6 +63,27 @@ export function Ship({
     if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
       setIsRotating(false);
     }
+  };
+
+  let scrollTimeout = useRef();
+
+  const handleScroll = (event) => {
+    clearTimeout(scrollTimeout.current);
+
+    setIsRotating(true);
+    isScrolling.current = true;
+
+    if (event.deltaY < 0) { // Scroll up
+      scrollSpeed.current += 0.005;
+    } else if (event.deltaY > 0) { // Scroll down
+      scrollSpeed.current -= 0.005;
+    }
+
+    scrollTimeout.current = setTimeout(() => {
+      scrollSpeed.current = 0;
+      setIsRotating(false);
+      isScrolling.current = false;
+    }, 200); // Adjust timeout duration as needed
   };
 
   useEffect(() => {
@@ -73,6 +97,7 @@ export function Ship({
     canvas.addEventListener("touchmove", handlePointerMove, { passive: false });
     window.addEventListener("keydown", handleKeyDown, { passive: false });
     window.addEventListener("keyup", handleKeyUp, { passive: false });
+    window.addEventListener("wheel", handleScroll, { passive: false });
 
     return () => {
       canvas.removeEventListener("pointerdown", handlePointerDown);
@@ -83,6 +108,7 @@ export function Ship({
       canvas.removeEventListener("touchmove", handlePointerMove);
       window.removeEventListener("keydown", handleKeyDown);
       window.removeEventListener("keyup", handleKeyUp);
+      window.removeEventListener("wheel", handleScroll);
     };
   }, [gl, handlePointerDown, handlePointerUp, handlePointerMove]);
 
@@ -94,15 +120,22 @@ export function Ship({
       if (Math.abs(rotationSpeed.current) < 0.001) {
         rotationSpeed.current = 0;
       }
-      islandRef.current.rotation.y += rotationSpeed.current;
-    } else {
-      const rotation = islandRef.current.rotation.y;
-      const normalizedRotation =
-        ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
-      const stageSize = (2 * Math.PI) / 4;
-      const stage = Math.floor(normalizedRotation / stageSize) + 1;
-      setCurrentStage(stage);
     }
+
+    // Apply the scroll speed with damping
+    scrollSpeed.current *= scrollDamping;
+    if (Math.abs(scrollSpeed.current) < 0.001) {
+      scrollSpeed.current = 0;
+    }
+
+    islandRef.current.rotation.y += rotationSpeed.current + scrollSpeed.current;
+
+    const rotation = islandRef.current.rotation.y;
+    const normalizedRotation =
+      ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
+    const stageSize = (2 * Math.PI) / 4;
+    const stage = Math.floor(normalizedRotation / stageSize) + 1;
+    setCurrentStage(stage);
 
     // Apply floating motion
     islandRef.current.position.y = Math.sin(elapsedTime * 0.5) * 0.1; // Floating up and down
@@ -121,7 +154,6 @@ export function Ship({
             material={materials.Boot_Finaal}
             rotation={[0, -0.6, 0]}
             scale={5}
-            ref={skyRef}
           />
         </group>
       </group>

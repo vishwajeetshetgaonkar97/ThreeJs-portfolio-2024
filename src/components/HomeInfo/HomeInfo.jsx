@@ -13,7 +13,7 @@ const HomeInfo = ({ currentStage }) => {
       </div>
     );
 
-  if (currentStage === 4) {
+  if (currentStage === 3) {
     return (
       <div className={styles.currentStageCard}>
         <div className={styles.currentStageCardContent}>
@@ -48,7 +48,7 @@ const HomeInfo = ({ currentStage }) => {
     );
   }
 
-  if (currentStage === 3) {
+  if (currentStage === 4) {
     return (
       <div className={styles.currentStageCard}>
         <div className={styles.currentStageCardContent}>
