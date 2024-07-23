@@ -236,7 +236,7 @@ export default function About() {
                 width={500}
                 height={500}
                 className={styles.caImage}
-                src="/reactJscertificate.jpg"
+                src="/reactJsCertificate.jpg"
                 alt="reactjs Vishwajeet Shetgaonkar"
               />
               <div className={styles.experienceCardHeading}>
