@@ -64,7 +64,7 @@ export default function Projects() {
                 location.href = "/projects/CocaColaSpline";
               }}
             >
-              <img src="/3dCOcaCola.png" alt="coca cola" />
+              <img src="/3dCocaCola.png" alt="coca cola" />
               <div className={styles.cardWrapperHeading}>3D Coca-Cola Website Concept</div>
               <div className={styles.cardWrapperDescription}>
               A modern and engaging digital experience that leverages trending 3D immersive technologies.
