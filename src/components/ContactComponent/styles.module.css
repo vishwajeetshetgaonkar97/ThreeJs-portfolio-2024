@@ -1,0 +1,82 @@
+
+
+.main_container{
+display: flex;
+justify-content: center;
+align-items: center;
+width:100%;
+padding: 4vh 2vw;
+background: linear-gradient(#ffffff33, rgba(255, 255, 255, 0.066));
+backdrop-filter:  blur(2px);
+text-align: center;
+border-radius: 1%;
+font-family: "Lato", sans-serif;
+flex-direction: column;
+font-size: 2.8vh;
+line-height: 4.2vh;
+position: relative;
+}
+
+
+
+.heading span{
+  font-family: "Sacramento", cursive;
+  background: -webkit-linear-gradient(rgba(0, 162, 255, 0.845), rgb(102, 2, 138));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size:5vh;
+  font-weight: 600;
+}
+
+.email{
+  font-size: 4vh;
+  background: -webkit-linear-gradient(rgb(0, 102, 255), rgb(102, 2, 138));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 1vh;
+  padding: 0.5vh;
+  font-weight: 600;
+  cursor: pointer;
+  
+}
+.email:hover{
+  opacity: 0.8;
+}
+
+.Icons{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1vh;
+  height: 5vh;
+}
+.imgIcons {
+  height: 4.5vh;
+  width: 4.5vh;
+  padding: 2vh;
+  cursor: pointer;
+  transition: transform .4s;
+}
+.imgIcons:hover, .email:hover{
+  filter: contrast(200%);
+}
+
+@media only screen and (max-width: 800px) {
+  .main_container{
+    top:6vh;
+    width: 88vw;
+    margin: 35% 1.5%;
+    padding: 2vh;
+    font-size: 2.6vh;
+    }
+
+
+    .email{
+      font-size: 4vh;
+      margin-top: 2vh;
+      padding-bottom: 1.5vh;
+    }
+    
+
+    
+
+}

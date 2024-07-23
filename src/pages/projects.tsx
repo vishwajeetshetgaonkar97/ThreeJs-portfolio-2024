@@ -9,6 +9,7 @@ import Navigation from "../components/Navigation/Navigation";
 import Footer from "@/components/Footer/Footer";
 import GlobalLoader from "../components/GlobalLoader/GlobalLoader";
 import CanvasComponent from "@/components/CanvasComponent/CanvasComponent";
+import ContactComponent from '../components/ContactComponent/ContactComponent'
 
 export default function Projects() {
   const [isLoading, setIsLoading] = useState(true);
@@ -179,7 +180,12 @@ export default function Projects() {
               </div>
             </div> */}
           </div>
+          <div className={styles.contactContainer}>
+
+          <ContactComponent/>
+          </div>
         </div>
+    
         <Footer />
       </main>
     </>

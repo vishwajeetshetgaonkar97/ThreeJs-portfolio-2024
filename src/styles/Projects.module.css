@@ -5,10 +5,11 @@
 .main_container {
   display: flex;
   justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 4vh;
-  width: 90vw;
-  margin: 2% 5%;
+  top: 6vh;
+  width: 96vw;
+  /* margin: 2% 5%; */
   padding: 4vh;
   /* background: linear-gradient(#ffffff33, rgba(255, 255, 255, 0.066));
 backdrop-filter:  blur(2px); */
@@ -24,7 +25,7 @@ backdrop-filter:  blur(2px); */
 .headingContainer {
   background: radial-gradient(#ffffff33, rgba(255, 255, 255, 0.066));
   backdrop-filter: blur(2px);
-  width: 82vw;
+  width: 88vw;
   margin: 0 4.5%;
   padding: 3vh 0;
 }
@@ -78,6 +79,11 @@ backdrop-filter:  blur(2px); */
   line-height: 2.8vh;
 }
 
+.contactContainer{
+  width: 87%;
+  margin-left:  -4.5%;
+}
+
 @media only screen and (max-width: 800px) {
   .main_container {
     top: 6vh;
@@ -118,5 +124,11 @@ backdrop-filter:  blur(2px); */
     font-size: 2vh;
     padding: 0 2vw 2vh 2vw;
     line-height: 3vh;
+  }
+  .contactContainer{
+    width: 80%;
+    margin-left:  -20%;
+    
+    margin-top: -18vh;
   }
 }
