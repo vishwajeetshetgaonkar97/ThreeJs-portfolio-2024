@@ -1,0 +1,62 @@
+
+.cardWrapper {
+  background: linear-gradient(#ffffff90, rgba(255, 255, 255, 0.066));
+  backdrop-filter: blur(5px);
+  margin: 1.5vh;
+  display: flex;
+  flex-direction: column;
+  width: calc(32vh * (16 / 9));
+  opacity: 0.95;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+  padding: 2vh 1vw 0 1vw;
+  
+}
+
+.cardWrapper:hover {
+  scale: 1.01;
+  backdrop-filter: blur(12px);
+  background: radial-gradient(rgba(0, 166, 255, 0.888)rgba(255, 255, 255, 0.333));
+}
+
+.cardWrapper img {
+  height: 32vh;
+  width: calc(32vh * (16 / 9));
+
+}
+
+.cardWrapperHeading {
+  font-size: 3.4vh;
+  font-weight: 800;
+  padding: 1.5vh 0 0.8vh 0;
+}
+
+.cardWrapperDescription {
+  font-size: 2.4vh;
+  padding: 0 1vw 2vh 0;
+  line-height: 3.4vh;
+  font-weight: 500;
+}
+
+
+  @media only screen and (max-width: 800px) {
+
+
+    .cardWrapper {
+      margin: 1vh;
+      width: calc(24vh * (16 / 9));
+    }
+  
+    .cardWrapper img {
+      height: 24vh;
+      width: calc(24vh * (16 / 9));
+    }
+  
+    .cardWrapperDescription {
+      font-size: 2vh;
+      padding: 0 2vw 2vh 2vw;
+      line-height: 3vh;
+    }
+  }
+
+  

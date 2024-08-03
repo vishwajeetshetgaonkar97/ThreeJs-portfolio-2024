@@ -9,7 +9,9 @@ import Navigation from "../components/Navigation/Navigation";
 import Footer from "@/components/Footer/Footer";
 import GlobalLoader from "../components/GlobalLoader/GlobalLoader";
 import CanvasComponent from "@/components/CanvasComponent/CanvasComponent";
-import ContactComponent from '../components/ContactComponent/ContactComponent'
+import ContactComponent from "../components/ContactComponent/ContactComponent";
+import projectList from "../utilityFunctions/utilityFunctions";
+import ProjectListComponent from "../components/ProjectListComponent/ProjectListComponent";
 
 export default function Projects() {
   const [isLoading, setIsLoading] = useState(true);
@@ -58,90 +60,18 @@ export default function Projects() {
           </div>
 
           <div className={styles.cardsContainer}>
-          <div
-              className={styles.cardWrapper}
-              onClick={() => {
-                location.href = "/projects/CocaColaSpline";
-              }}
-            >
-              <img src="/3dCocaCola.png" alt="coca cola" />
-              <div className={styles.cardWrapperHeading}>3D Coca-Cola Website Concept</div>
-              <div className={styles.cardWrapperDescription}>
-              A modern and engaging digital experience that leverages trending 3D immersive technologies.
-              </div>
-            </div>
-
-            <div
-              className={styles.cardWrapper}
-              onClick={() => {
-                location.href = "/projects/SarvaDashboard";
-              }}
-            >
-              <img src="/sarvaIntroImage.png" alt="sarve" />
-              <div className={styles.cardWrapperHeading}>Sarva Dashboard</div>
-              <div className={styles.cardWrapperDescription}>
-                A dashboard for displaying air quality conditions for buildings
-                and surrounding areas on a map, along with additional relevant
-                information.
-              </div>
-            </div>
-
-            <div
-              className={styles.cardWrapper}
-              onClick={() => {
-                location.href = "/projects/SpotFind";
-                // window.open("https://www.producthunt.com/products/spotfind");
-              }}
-            >
-              <img src="/spotFindIntroImage.png" alt="dashboard" />
-              <div className={styles.cardWrapperHeading}>Spot-Find</div>
-              <div className={styles.cardWrapperDescription}>
-                SpotFind is a music discovery tool to help you in times where
-                you just can't seem to find something new to listen to.
-              </div>
-            </div>
-
-            <div
-              className={styles.cardWrapper}
-              onClick={() => {
-                location.href = "/projects/SvPlay";
-              }}
-            >
-              <img src="/svPlayIntroImage.png" alt="dashboard" />
-              <div className={styles.cardWrapperHeading}>SV-Play</div>
-              <div className={styles.cardWrapperDescription}>
-                A turf booking app for users in their locality with the
-                capability to share it on multiple platforms
-              </div>
-            </div>
-
-            <div
-              className={styles.cardWrapper}
-              onClick={() => {
-                location.href = "/projects/CssSanta";
-              }}
-            >
-              <img src="/cssSanta.png" alt="css santa" />
-              <div className={styles.cardWrapperHeading}>CSS Santa</div>
-              <div className={styles.cardWrapperDescription}>
-                A pure CSS representation of a Santa to explore
-                different CSS forms and properties.
-              </div>
-            </div>
-
-            <div
-              className={styles.cardWrapper}
-              onClick={() => {
-                location.href = "/projects/CssF1";
-              }}
-            >
-              <img src="/cssF1.png" alt="dashboard" />
-              <div className={styles.cardWrapperHeading}>CSS F1 Car</div>
-              <div className={styles.cardWrapperDescription}>
-                A pure CSS representation of a Formula 1 car to explore
-                different CSS forms and properties.
-              </div>
-            </div>
+            {projectList.map((projectObj) => {
+              console.log("link", projectObj.link);
+              return (
+                <ProjectListComponent
+                  key={projectObj.id}
+                  projectName={projectObj.name}
+                  description={projectObj.description}
+                  projectLink={projectObj.link}
+                  imgUrl={projectObj.image}
+                />
+              );
+            })}
 
             {/* <div
               className={styles.cardWrapper}
@@ -181,11 +111,10 @@ export default function Projects() {
             </div> */}
           </div>
           <div className={styles.contactContainer}>
-
-          <ContactComponent/>
+            <ContactComponent />
           </div>
         </div>
-    
+
         <Footer />
       </main>
     </>
