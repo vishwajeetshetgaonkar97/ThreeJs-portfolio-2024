@@ -5,6 +5,7 @@ import Head from "next/head";
 import Footer from "../../components/Footer/Footer";
 import Navigation from "../../components/Navigation/Navigation";
 import Image from "next/image";
+import ContactComponent from "../../components/ContactComponent/ContactComponent";
 
 const SvPlay = (props) => {
   return (
@@ -91,6 +92,9 @@ const SvPlay = (props) => {
               to create an application that not only streamlines booking but
               also sets industry standards for user experience
             </div>
+          </div>
+          <div className={styles.contactContainer}>
+            <ContactComponent />
           </div>
         </div>
         <Footer />

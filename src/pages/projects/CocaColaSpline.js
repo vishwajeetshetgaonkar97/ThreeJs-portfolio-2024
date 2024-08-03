@@ -5,6 +5,7 @@ import Head from "next/head";
 import Footer from "../../components/Footer/Footer";
 import Navigation from "../../components/Navigation/Navigation";
 import Image from "next/image";
+import ContactComponent from "../../components/ContactComponent/ContactComponent";
 
 const SpotFind = (props) => {
   return (
@@ -33,7 +34,9 @@ const SpotFind = (props) => {
             <div className={styles.headingInfoContainer}>
               <div className={styles.heading}>3D Coca-Cola Website Concept</div>
               <div className={styles.subHeading}>
-                A 3D Coca-cola Website Concept <span>Designed</span> and <span>Developed</span> to create a modern and engaging digital experience that leverages trending 3D immersive technologies. 
+                A 3D Coca-cola Website Concept <span>Designed</span> and{" "}
+                <span>Developed</span> to create a modern and engaging digital
+                experience that leverages trending 3D immersive technologies.
               </div>
               <Image
                 width={220}
@@ -42,27 +45,30 @@ const SpotFind = (props) => {
                 alt="coca cola Vish"
                 className={`${styles.toolsImage} ${styles.ccToolsImage}`}
               />
-                  <div className={styles.buttonContainer}>
-          <button className={styles["cssbuttons-io-button"]} onClick={() => {
-              window.open("https://vish-3d-coca-cola.vercel.app/");
-            }}>
-            view Project
-            <div className={styles.icon}>
-              <svg
-                height="24"
-                width="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M0 0h24v24H0z" fill="none"></path>
-                <path
-                  d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </div>
-          </button>
-        </div>
+              <div className={styles.buttonContainer}>
+                <button
+                  className={styles["cssbuttons-io-button"]}
+                  onClick={() => {
+                    window.open("https://vish-3d-coca-cola.vercel.app/");
+                  }}
+                >
+                  view Project
+                  <div className={styles.icon}>
+                    <svg
+                      height="24"
+                      width="24"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                      <path
+                        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </div>
+                </button>
+              </div>
             </div>
             <Image
               className={styles.topImage}
@@ -92,10 +98,23 @@ const SpotFind = (props) => {
             />
 
             <div className={styles.bottomInfoDescription}>
-        
-            My goal was to create an immersive 3D experience website using Spline. This project required me to delve deep into various concepts and events within Spline, such as transitions, scrolls, drag-and-drop mechanisms, and gravity simulations. I went through multiple iterations, constantly refining and improving the design. The process involved a lot of trial and error.
-
-Since this was a side project that I worked on occasionally, it took time to sort things out and conceptualize the various elements. I often explored different approaches that I felt could be improved and tested them out. This iterative process not only helped me refine the project but also significantly enhanced my understanding of design principles and the Spline tool, which is similar to Adobe Substance.    </div>
+              My goal was to create an immersive 3D experience website using
+              Spline. This project required me to delve deep into various
+              concepts and events within Spline, such as transitions, scrolls,
+              drag-and-drop mechanisms, and gravity simulations. I went through
+              multiple iterations, constantly refining and improving the design.
+              The process involved a lot of trial and error. Since this was a
+              side project that I worked on occasionally, it took time to sort
+              things out and conceptualize the various elements. I often
+              explored different approaches that I felt could be improved and
+              tested them out. This iterative process not only helped me refine
+              the project but also significantly enhanced my understanding of
+              design principles and the Spline tool, which is similar to Adobe
+              Substance.{" "}
+            </div>
+          </div>
+          <div className={styles.contactContainer}>
+            <ContactComponent />
           </div>
         </div>
         <Footer />

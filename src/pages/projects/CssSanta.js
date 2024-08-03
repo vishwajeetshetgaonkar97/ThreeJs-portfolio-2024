@@ -5,6 +5,7 @@ import Head from "next/head";
 import Footer from "../../components/Footer/Footer";
 import Navigation from "../../components/Navigation/Navigation";
 import Image from "next/image";
+import ContactComponent from "../../components/ContactComponent/ContactComponent";
 
 const CssSanta = (props) => {
   return (
@@ -94,6 +95,9 @@ const CssSanta = (props) => {
             <div className={styles.bottomInfoDescription}>
         
             A pure CSS representation of a Formula 1 car to explore different CSS forms and properties, which helps in reducing unnecessary use of plugins and packages for better optimization.</div>
+          </div>
+          <div className={styles.contactContainer}>
+            <ContactComponent />
           </div>
         </div>
         <Footer />

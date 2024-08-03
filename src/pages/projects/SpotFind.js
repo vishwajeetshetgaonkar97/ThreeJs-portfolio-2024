@@ -5,6 +5,7 @@ import Head from "next/head";
 import Footer from "../../components/Footer/Footer";
 import Navigation from "../../components/Navigation/Navigation";
 import Image from "next/image";
+import ContactComponent from "../../components/ContactComponent/ContactComponent";
 
 const SpotFind = (props) => {
   return (
@@ -105,6 +106,9 @@ const SpotFind = (props) => {
               feedback and launched on Product Hunt, receiving a positive
               reception.
             </div>
+          </div>
+          <div className={styles.contactContainer}>
+            <ContactComponent />
           </div>
         </div>
         <Footer />

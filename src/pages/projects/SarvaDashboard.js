@@ -5,6 +5,7 @@ import Head from "next/head";
 import Footer from "../../components/Footer/Footer";
 import Navigation from "../../components/Navigation/Navigation";
 import Image from "next/image";
+import ContactComponent from "../../components/ContactComponent/ContactComponent";
 
 const SarvaDashboard = (props) => {
   return (
@@ -89,6 +90,9 @@ const SarvaDashboard = (props) => {
               user-friendly, visually appealing dashboard that met the client's
               air quality monitoring needs.
             </div>
+          </div>
+          <div className={styles.contactContainer}>
+            <ContactComponent />
           </div>
         </div>
         <Footer />
